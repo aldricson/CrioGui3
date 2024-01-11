@@ -1,0 +1,23 @@
+{
+	"BUILD_DIR" : "C:/Users/aldri/Desktop/crio_gui/crio-gui3/build/crioGui3_autogen",
+	"CMAKE_BINARY_DIR" : "C:/Users/aldri/Desktop/crio_gui/crio-gui3/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "C:/Users/aldri/Desktop/crio_gui/crio-gui3/build",
+	"CMAKE_CURRENT_SOURCE_DIR" : "C:/Users/aldri/Desktop/crio_gui/crio-gui3",
+	"CMAKE_SOURCE_DIR" : "C:/Users/aldri/Desktop/crio_gui/crio-gui3",
+	"INCLUDE_DIR" : "C:/Users/aldri/Desktop/crio_gui/crio-gui3/build/crioGui3_autogen/include",
+	"INPUTS" : 
+	[
+		"C:/Users/aldri/Desktop/crio_gui/crio-gui3/scripts/ssh.bat",
+		"C:/Users/aldri/Desktop/crio_gui/crio-gui3/scripts/ramDisk.bat"
+	],
+	"LOCK_FILE" : "C:/Users/aldri/Desktop/crio_gui/crio-gui3/build/CMakeFiles/crioGui3_autogen.dir/AutoRcc_scripts_EWIEGA46WW_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "-name", "scripts" ],
+	"OUTPUT_CHECKSUM" : "EWIEGA46WW",
+	"OUTPUT_NAME" : "qrc_scripts.cpp",
+	"RCC_EXECUTABLE" : "C:/Qt/6.4.0/msvc2019_64/./bin/rcc.exe",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "C:/Users/aldri/Desktop/crio_gui/crio-gui3/build/CMakeFiles/crioGui3_autogen.dir/AutoRcc_scripts_EWIEGA46WW_Used.txt",
+	"SOURCE" : "C:/Users/aldri/Desktop/crio_gui/crio-gui3/scripts.qrc",
+	"VERBOSITY" : 0
+}

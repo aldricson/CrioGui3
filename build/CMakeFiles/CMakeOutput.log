@@ -1,0 +1,110 @@
+The system is: Windows - 10.0.19045 - AMD64
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/HostX64/x64/cl.exe 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+Compilateur d'optimisation Microsoft (R) C/C++ version 19.29.30137 pour x64
+Copyright (C) Microsoft Corporation. Tous droits réservés.
+
+CMakeCXXCompilerId.cpp
+Microsoft (R) Incremental Linker Version 14.29.30137.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/out:CMakeCXXCompilerId.exe 
+CMakeCXXCompilerId.obj 
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.exe"
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.obj"
+
+The CXX compiler identification is MSVC, found in "C:/Users/aldri/Desktop/crio_gui/crio-gui3/build/CMakeFiles/3.21.1/CompilerIdCXX/CMakeCXXCompilerId.exe"
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: C:/Users/aldri/Desktop/crio_gui/crio-gui3/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Qt/Tools/Ninja/ninja.exe cmTC_a9437 && [1/2] Building CXX object CMakeFiles\cmTC_a9437.dir\CMakeCXXCompilerABI.cpp.obj
+Remarque : inclusion du fichier :  C:\Qt\Tools\CMake_64\share\cmake-3.21\Modules\CMakeCompilerABI.h
+[2/2] Linking CXX executable cmTC_a9437.exe
+
+
+
+Performing C++ SOURCE FILE Test HAVE_STDATOMIC succeeded with the following output:
+Change Dir: C:/Users/aldri/Desktop/crio_gui/crio-gui3/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Qt/Tools/Ninja/ninja.exe cmTC_d31de && [1/2] Building CXX object CMakeFiles\cmTC_d31de.dir\src.cxx.obj
+Remarque : inclusion du fichier :  C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\atomic
+Remarque : inclusion du fichier :   C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\yvals.h
+Remarque : inclusion du fichier :    C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\yvals_core.h
+Remarque : inclusion du fichier :     C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vcruntime.h
+Remarque : inclusion du fichier :      C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\sal.h
+Remarque : inclusion du fichier :       C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\concurrencysal.h
+Remarque : inclusion du fichier :      C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vadefs.h
+Remarque : inclusion du fichier :     C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xkeycheck.h
+Remarque : inclusion du fichier :    C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\ucrt\crtdbg.h
+Remarque : inclusion du fichier :     C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\ucrt\corecrt.h
+Remarque : inclusion du fichier :     C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vcruntime_new_debug.h
+Remarque : inclusion du fichier :      C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vcruntime_new.h
+Remarque : inclusion du fichier :    C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\crtdefs.h
+Remarque : inclusion du fichier :    C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\use_ansi.h
+Remarque : inclusion du fichier :   C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\cstddef
+Remarque : inclusion du fichier :    C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\ucrt\stddef.h
+Remarque : inclusion du fichier :    C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtr1common
+Remarque : inclusion du fichier :   C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\cstdint
+Remarque : inclusion du fichier :    C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\stdint.h
+Remarque : inclusion du fichier :   C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\cstring
+Remarque : inclusion du fichier :    C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\ucrt\string.h
+Remarque : inclusion du fichier :     C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\ucrt\corecrt_memory.h
+Remarque : inclusion du fichier :      C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\ucrt\corecrt_memcpy_s.h
+Remarque : inclusion du fichier :       C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\ucrt\errno.h
+Remarque : inclusion du fichier :       C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vcruntime_string.h
+Remarque : inclusion du fichier :     C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\ucrt\corecrt_wstring.h
+Remarque : inclusion du fichier :   C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xatomic.h
+Remarque : inclusion du fichier :    C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\intrin0.h
+Remarque : inclusion du fichier :     C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\intrin0.inl.h
+Remarque : inclusion du fichier :    C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\type_traits
+Remarque : inclusion du fichier :     C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xstddef
+Remarque : inclusion du fichier :      C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\cstdlib
+Remarque : inclusion du fichier :       C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\ucrt\math.h
+Remarque : inclusion du fichier :        C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\ucrt\corecrt_math.h
+Remarque : inclusion du fichier :       C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\ucrt\stdlib.h
+Remarque : inclusion du fichier :        C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\ucrt\corecrt_malloc.h
+Remarque : inclusion du fichier :        C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\ucrt\corecrt_search.h
+Remarque : inclusion du fichier :        C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\ucrt\corecrt_wstdlib.h
+Remarque : inclusion du fichier :        C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\limits.h
+Remarque : inclusion du fichier :      C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\initializer_list
+Remarque : inclusion du fichier :   C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xthreads.h
+Remarque : inclusion du fichier :    C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\climits
+Remarque : inclusion du fichier :    C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtimec.h
+Remarque : inclusion du fichier :     C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ctime
+Remarque : inclusion du fichier :      C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\ucrt\time.h
+Remarque : inclusion du fichier :       C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\ucrt\corecrt_wtime.h
+[2/2] Linking CXX executable cmTC_d31de.exe
+
+
+Source file was:
+#include <atomic>
+#include <cstdint>
+
+int main(int, char **)
+{
+    volatile std::atomic<char>    size_1;
+    volatile std::atomic<short>   size_2;
+    volatile std::atomic<int>     size_4;
+    volatile std::atomic<int64_t> size_8;
+
+    ++size_1;
+    ++size_2;
+    ++size_4;
+    ++size_8;
+
+    (void)size_1.load(std::memory_order_relaxed);
+    (void)size_2.load(std::memory_order_relaxed);
+    (void)size_4.load(std::memory_order_relaxed);
+    (void)size_8.load(std::memory_order_relaxed);
+
+    return 0;
+}

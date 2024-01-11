@@ -1,0 +1,28 @@
+{
+	"BUILD_DIR" : "C:/Users/aldri/Desktop/crio_gui/crio-gui3/build/crioGui3_autogen",
+	"CMAKE_BINARY_DIR" : "C:/Users/aldri/Desktop/crio_gui/crio-gui3/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "C:/Users/aldri/Desktop/crio_gui/crio-gui3/build",
+	"CMAKE_CURRENT_SOURCE_DIR" : "C:/Users/aldri/Desktop/crio_gui/crio-gui3",
+	"CMAKE_SOURCE_DIR" : "C:/Users/aldri/Desktop/crio_gui/crio-gui3",
+	"INCLUDE_DIR" : "C:/Users/aldri/Desktop/crio_gui/crio-gui3/build/crioGui3_autogen/include",
+	"INPUTS" : 
+	[
+		"C:/Users/aldri/Desktop/crio_gui/crio-gui3/images/down-arrow.png",
+		"C:/Users/aldri/Desktop/crio_gui/crio-gui3/images/oeil.png",
+		"C:/Users/aldri/Desktop/crio_gui/crio-gui3/images/branch-end.png",
+		"C:/Users/aldri/Desktop/crio_gui/crio-gui3/images/right-arrow.png",
+		"C:/Users/aldri/Desktop/crio_gui/crio-gui3/images/vline.png",
+		"C:/Users/aldri/Desktop/crio_gui/crio-gui3/images/branch-more.png",
+		"C:/Users/aldri/Desktop/crio_gui/crio-gui3/images/cacher.png"
+	],
+	"LOCK_FILE" : "C:/Users/aldri/Desktop/crio_gui/crio-gui3/build/CMakeFiles/crioGui3_autogen.dir/AutoRcc_crio-gui2_EWIEGA46WW_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "-name", "crio_gui2" ],
+	"OUTPUT_CHECKSUM" : "EWIEGA46WW",
+	"OUTPUT_NAME" : "qrc_crio-gui2.cpp",
+	"RCC_EXECUTABLE" : "C:/Qt/6.4.0/msvc2019_64/./bin/rcc.exe",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "C:/Users/aldri/Desktop/crio_gui/crio-gui3/build/CMakeFiles/crioGui3_autogen.dir/AutoRcc_crio-gui2_EWIEGA46WW_Used.txt",
+	"SOURCE" : "C:/Users/aldri/Desktop/crio_gui/crio-gui3/crio-gui2.qrc",
+	"VERBOSITY" : 0
+}
