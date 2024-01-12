@@ -292,4 +292,5 @@ C:/Users/aldri/Desktop/crio_gui/crio-gui3/build/crioGui3_autogen/DZMYHVTPIZ/moc_
   C:/Qt/6.4.0/msvc2019_64/include/QtNetwork/qtnetworkexports.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtNetwork/qtnetworkglobal.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtNetwork/qtnetworkversion.h \
-  C:/Qt/6.4.0/msvc2019_64/include/QtNetwork/qudpsocket.h
+  C:/Qt/6.4.0/msvc2019_64/include/QtNetwork/qudpsocket.h \
+  C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/NetWorking/QSSLBaseClient.h

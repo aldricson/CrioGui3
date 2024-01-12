@@ -750,23 +750,79 @@ crioGui3_autogen/timestamp: \
   C:/Qt/6.4.0/msvc2019_64/lib/cmake/Qt6ZlibPrivate/Qt6ZlibPrivateConfigVersionImpl.cmake \
   C:/Qt/6.4.0/msvc2019_64/lib/cmake/Qt6ZlibPrivate/Qt6ZlibPrivateTargets.cmake \
   C:/Qt/6.4.0/msvc2019_64/lib/cmake/Qt6ZlibPrivate/Qt6ZlibPrivateVersionlessTargets.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeCXXCompiler.cmake.in \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeCXXCompilerABI.cpp \
   C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeCXXInformation.cmake \
   C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake \
   C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeCommonLanguageInclude.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeCompilerIdDetection.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeDetermineCXXCompiler.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeDetermineCompileFeatures.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeDetermineCompiler.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeDetermineCompilerABI.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeDetermineCompilerId.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeDetermineRCCompiler.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeDetermineSystem.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeFindBinUtils.cmake \
   C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeFindDependencyMacro.cmake \
   C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeGenericSystem.cmake \
   C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeInitializeConfigs.cmake \
   C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeLanguageInformation.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeNinjaFindMake.cmake \
   C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeParseArguments.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeParseImplicitIncludeInfo.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeParseImplicitLinkInfo.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeParseLibraryArchitecture.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeRCCompiler.cmake.in \
   C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeRCInformation.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeSystem.cmake.in \
   C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeSystemSpecificInformation.cmake \
   C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeSystemSpecificInitialize.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeTestCXXCompiler.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeTestCompilerCommon.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeTestRCCompiler.cmake \
   C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CheckCXXCompilerFlag.cmake \
   C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CheckCXXSourceCompiles.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CheckIncludeFile.cxx.in \
   C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CheckIncludeFileCXX.cmake \
   C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CheckLibraryExists.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/ADSP-DetermineCompiler.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/ARMCC-DetermineCompiler.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/ARMClang-DetermineCompiler.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/AppleClang-DetermineCompiler.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/Borland-DetermineCompiler.cmake \
   C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/Clang-DetermineCompiler.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/Clang-DetermineCompilerInternal.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/Cray-DetermineCompiler.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/Embarcadero-DetermineCompiler.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/Fujitsu-DetermineCompiler.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/GHS-DetermineCompiler.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/HP-CXX-DetermineCompiler.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/IAR-DetermineCompiler.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/Intel-DetermineCompiler.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake \
   C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/MSVC-CXX.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/MSVC-DetermineCompiler.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/NVHPC-DetermineCompiler.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/NVIDIA-DetermineCompiler.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/PGI-DetermineCompiler.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/PathScale-DetermineCompiler.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/ROCMClang-DetermineCompiler.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/SCO-DetermineCompiler.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/TI-DetermineCompiler.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/Watcom-DetermineCompiler.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/XL-CXX-DetermineCompiler.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake \
   C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/FindPackageHandleStandardArgs.cmake \
   C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/FindPackageMessage.cmake \
   C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/FindThreads.cmake \
@@ -774,6 +830,8 @@ crioGui3_autogen/timestamp: \
   C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/GNUInstallDirs.cmake \
   C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Internal/CheckCompilerFlag.cmake \
   C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Internal/CheckSourceCompiles.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Internal/FeatureTesting.cmake \
+  C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Platform/Windows-Determine-CXX.cmake \
   C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Platform/Windows-MSVC-CXX.cmake \
   C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Platform/Windows-MSVC.cmake \
   C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Platform/Windows.cmake \
@@ -850,12 +908,14 @@ crioGui3_autogen/timestamp: \
   ../src/NetWorking/QModbusCrioClient.h \
   ../src/NetWorking/QSSHCommand.cpp \
   ../src/NetWorking/QSSHCommand.h \
+  ../src/NetWorking/QSSLBaseClient.cpp \
+  ../src/NetWorking/QSSLBaseClient.h \
   ../src/NetWorking/QSSLCommandClient.cpp \
   ../src/NetWorking/QSSLCommandClient.h \
+  ../src/NetWorking/QSSLDebugClient.cpp \
+  ../src/NetWorking/QSSLDebugClient.h \
   ../src/NetWorking/QTCPDebugClient.cpp \
   ../src/NetWorking/QTCPDebugClient.h \
-  ../src/NetWorking/QtTcpClient.cpp \
-  ../src/NetWorking/QtTcpClient.h \
   ../src/NetWorking/certificateinfo.cpp \
   ../src/NetWorking/certificateinfo.h \
   ../src/QSignalAggregator.cpp \

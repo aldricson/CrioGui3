@@ -339,5 +339,6 @@ C:/Users/aldri/Desktop/crio_gui/crio-gui3/build/crioGui3_autogen/O3FHJDNSNF/moc_
   C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/qtwidgetsglobal.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/qwidget.h \
   C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/BasicWidgets/QOScope.h \
+  C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/NetWorking/QSSLBaseClient.h \
   C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/NetWorking/QSSLCommandClient.h \
   C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/stringUtils.h

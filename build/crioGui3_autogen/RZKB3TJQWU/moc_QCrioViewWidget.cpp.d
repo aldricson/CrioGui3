@@ -418,6 +418,7 @@ C:/Users/aldri/Desktop/crio_gui/crio-gui3/build/crioGui3_autogen/RZKB3TJQWU/moc_
   C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/NISpecifics/NIDeviceModule.h \
   C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/NISpecifics/NIDeviceModuleFactory.h \
   C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/NetWorking/QSSHCommand.h \
+  C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/NetWorking/QSSLBaseClient.h \
   C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/NetWorking/QSSLCommandClient.h \
   C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/TabWidgetFundations/CrioDirectAccessTestWidgets/QBaseAnalogReaderTestWidget.h \
   C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/TabWidgetFundations/CrioDirectAccessTestWidgets/QReadCurrentTestWidget.h \
