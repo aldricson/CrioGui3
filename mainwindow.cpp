@@ -7,20 +7,20 @@
 #include <QLabel>
 #include <QTabWidget>
 #include <QCryptographicHash>
-#include "./src/NetWorking/QTCPDebugClient.h"
+
 #include "./src/TabWidgets/QDeviceParametersWidget.h"
 #include "./src/TabWidgets/QGlobalParametersWidget.h"
-#include "./src/securityHardening/QSecureScreen.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
 
-    secureScreen = new QSecureScreen(this);
-    Sleep(500);
-    ramDiskManager=new QRamDiskManager(this);
-    sshExecutionPath = ramDiskManager->createRamDisk();
+    m_sslClient = new QSSLCommandClient("fileMangerClient",this);
+    connect (m_sslClient, &QSSLCommandClient::listInifilesSignal, this , &MainWindow::onNewModuleListRetrived, Qt::QueuedConnection);
+    //connect (m_sslClient, &QSSLCommandClient::moduleDownloadedSignal, this, &MainWindow::onNewModuleIniFileDownloaded, Qt::QueuedConnection);
+
+    sshExecutionPath = QCoreApplication::applicationDirPath() + "/";
     writeSSHScriptToFile();
 
 
@@ -28,8 +28,7 @@ MainWindow::MainWindow(QWidget *parent)
     iniModbusSetupPath  = QCoreApplication::applicationDirPath() + "/" + "modbus"  + "/" ;
     modbusMappingPath   = QCoreApplication::applicationDirPath() + "/" + "mapping" + "/" ;
     moduleExtractor     = new QCrioModulesDataExtractor (iniModulesLocalPath,this) ;
-    m_crioDebugger      = new QTCPDebugClient           (this) ;
-    connect (m_crioDebugger, &QTCPDebugClient::debugMessageReceived, this, &MainWindow::onCrioDebugMessage, Qt::QueuedConnection);
+
 
     ui->setupUi(this);
     tabWidget = new QTabWidget(this);
@@ -41,8 +40,6 @@ MainWindow::MainWindow(QWidget *parent)
     tabWidget -> addTab ( createDeviceParametersTab () , tr("DeviceParameters" ));
     tabWidget -> addTab ( createMappingTableTab     () , tr("MappingTable"     ));
     setCentralWidget(tabWidget);
-    delete(secureScreen);
-    secureScreen = nullptr;
     raise();
 }
 
@@ -110,10 +107,6 @@ void MainWindow::setupSSHModule()
                         //sent when a "cd /whatever/folder; ls" request
                         //has completed
     connect(sshCommand, &QSSHCommand::listFileDoneSignal           , this , &MainWindow::onLsCommandExecuted       ,Qt::QueuedConnection);
-
-                        //sent when list the ini files
-                        //for devices modules has completed
-    connect(sshCommand, &QSSHCommand::moduleListRetrievedSignal    , this , &MainWindow::onModuleListRetrived      ,Qt::QueuedConnection);
 
                         //sent when modules ini files are
                         //effectiveley downloaded
@@ -239,7 +232,7 @@ void MainWindow::downloadModulesDefinitions(int index)
 {
     QString fileName = retriveStringFromListViewIndex(index);
     QString params = "/home/dataDrill/"+fileName+" "+iniModulesLocalPath+fileName;
-    qDebug()<<params;
+    qDebug()<<"..."<<params;
     sshCommand->downloadModulesDefinitions(params);
 }
 
@@ -297,11 +290,12 @@ void MainWindow::onLsCommandExecuted(const QString &output, const QString &lastC
     crioViewTab->terminalOutput()->addLastOutput("fileList:\n"+output);
 }
 
-void MainWindow::onModuleListRetrived(const QString &output, const QString &lastCommand)
+
+
+void MainWindow::onNewModuleListRetrived(const QString &iniList)
 {
-    lastSshCommand = lastCommand;
-    crioViewTab->terminalOutput()->addLastCommand(lastCommand);
-    moduleList = output.split("\n", Qt::SkipEmptyParts);
+    crioViewTab->terminalOutput()->addLastCommand("list ini files");
+    moduleList = iniList.split("\n", Qt::SkipEmptyParts);
     //reset the progress bar min/max/value
     crioViewTab->onResetModuleLoadProgressBar(0,moduleList.count()-1,0);
     // Sort the list based on the number in the filename
@@ -354,10 +348,7 @@ void MainWindow::onModuleIniFileDownloaded(const QString &output, const QString 
             // All modules are downloaded, let's update the user interface
             //One we create devices objects from the config files
             moduleExtractor->createDevicesFromConfig();
-            //crioViewTab->onUpdateModelList(iniTreeWidget,moduleList);
             crioViewTab->onUpdateModelList(devicesTab->iniTreeWidget(),moduleList);
-
-
             crioViewTab->modulesListView()->updateModelList(moduleList);
             crioViewTab->modulesListView()->setIniTreeWidget(devicesTab->iniTreeWidget());
             crioViewTab->modulesListView()->copyTo(devicesTab->modulesListView());
@@ -366,10 +357,49 @@ void MainWindow::onModuleIniFileDownloaded(const QString &output, const QString 
 
 
             crioViewTab->onUpdateControlsAfterModulesDownloaded(moduleExtractor,currentModulesPathList,voltageModulesPathList,commandPort);
+
+
             sshCommand->downloadModbusSetup(iniModbusSetupPath);
         }
     }
 }
+
+//void MainWindow::onNewModuleIniFileDownloaded(const QString &output)
+//{
+//    crioViewTab->terminalOutput()->addLastCommand("downloading module complete:");
+//    crioViewTab->terminalOutput()->addLastOutput(output);
+//    if (output.contains("100%"))
+//    {
+//        crioViewTab->modulesLoadingProgressBar()->setValue(crioViewTab->modulesLoadingProgressBar()->value() + 1);
+//        crioViewTab->modulesLoadingProgressBar()->update();
+//
+//        if (currentModuleIndex < moduleList.count() - 1)
+//        {
+//            // Not yet downloaded all modules, continue downloading
+//            currentModuleIndex++;
+//            downloadModulesDefinitions(currentModuleIndex);
+//        }
+//        else
+//        {
+//            // All modules are downloaded, let's update the user interface
+//            //One we create devices objects from the config files
+//            moduleExtractor->createDevicesFromConfig();
+//            //crioViewTab->onUpdateModelList(iniTreeWidget,moduleList);
+//            crioViewTab->onUpdateModelList(devicesTab->iniTreeWidget(),moduleList);
+//
+//
+//            crioViewTab->modulesListView()->updateModelList(moduleList);
+//            crioViewTab->modulesListView()->setIniTreeWidget(devicesTab->iniTreeWidget());
+//            crioViewTab->modulesListView()->copyTo(devicesTab->modulesListView());
+//
+//
+//
+//
+//            crioViewTab->onUpdateControlsAfterModulesDownloaded(moduleExtractor,currentModulesPathList,voltageModulesPathList,commandPort);
+//            sshCommand->downloadModbusSetup(iniModbusSetupPath);
+//        }
+//    }
+//}
 
 void MainWindow::onModubusParamFileDownloaded(const QString &output, const QString &lastCommand)
 {
@@ -431,7 +461,10 @@ void MainWindow::onServerGetState(const bool &isRunning, const QString &lastComm
    }
    else
    {
-     sshCommand->getModulesDefinitions();
+     m_sslClient->setHost(crioViewTab->ipEdit()->ipAddress());
+     m_sslClient->setPort(commandPort);
+     m_sslClient->sendListModulesRequest();
+    // fdsvrsrv sshCommand->getModulesDefinitions();
    }
 }
 
@@ -458,7 +491,6 @@ void MainWindow::onServerStartSuccesfull(const int &screenSession, const QString
     QString host     =  crioViewTab->ipEdit       () -> ipAddress();
     QString login    =  crioViewTab->loginEdit    () -> text     ();
     QString password =  crioViewTab->passwordEdit () -> text     ();
-    m_crioDebugger->connectToDebugServer(host,commandPort+1);
     // the server has started succesfully
     //keep track of the last command
     lastSshCommand =  lastCommand;
@@ -467,7 +499,12 @@ void MainWindow::onServerStartSuccesfull(const int &screenSession, const QString
     //clear the module list
     moduleList.clear();
     //and get the module list, when the module list is executed sshCommand will trigger onModuleListRetrived signal with the output
-    sshCommand->getModulesDefinitions();
+    m_sslClient->setHost(crioViewTab->ipEdit()->ipAddress());
+    m_sslClient->setPort(commandPort);
+    m_sslClient->sendListModulesRequest();
+
+
+    //ffsdfsdfsdfsd sshCommand->getModulesDefinitions();
 
     globalTab->setHostName(host    );
     globalTab->setUserName(login   );

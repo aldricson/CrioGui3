@@ -7,7 +7,6 @@ C:/Users/aldri/Desktop/crio_gui/crio-gui3/build/crioGui3_autogen/EWIEGA46WW/moc_
   C:/Qt/6.4.0/msvc2019_64/include/QtCore/QDebug \
   C:/Qt/6.4.0/msvc2019_64/include/QtCore/QDir \
   C:/Qt/6.4.0/msvc2019_64/include/QtCore/QFile \
-  C:/Qt/6.4.0/msvc2019_64/include/QtCore/QFileInfo \
   C:/Qt/6.4.0/msvc2019_64/include/QtCore/QFlags \
   C:/Qt/6.4.0/msvc2019_64/include/QtCore/QHash \
   C:/Qt/6.4.0/msvc2019_64/include/QtCore/QIODevice \
@@ -421,6 +420,7 @@ C:/Users/aldri/Desktop/crio_gui/crio-gui3/build/crioGui3_autogen/EWIEGA46WW/moc_
   C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/qtwidgetsglobal.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/qwidget.h \
   C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/BasicWidgets/QBetterSwitchButton.h \
+  C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/BasicWidgets/QClientsVizu.h \
   C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/BasicWidgets/QIniTreeWidget.h \
   C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/BasicWidgets/QIpAddressEditor.h \
   C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/BasicWidgets/QMultiLineTextVisualizer.h \
@@ -434,6 +434,8 @@ C:/Users/aldri/Desktop/crio_gui/crio-gui3/build/crioGui3_autogen/EWIEGA46WW/moc_
   C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/NetWorking/QSSHCommand.h \
   C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/NetWorking/QSSLBaseClient.h \
   C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/NetWorking/QSSLCommandClient.h \
+  C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/NetWorking/QSSLCurrentPoller.h \
+  C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/NetWorking/QSSLVoltagePoller.h \
   C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/TabWidgetFundations/CrioDirectAccessTestWidgets/QBaseAnalogReaderTestWidget.h \
   C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/TabWidgetFundations/CrioDirectAccessTestWidgets/QReadCurrentTestWidget.h \
   C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/TabWidgetFundations/CrioDirectAccessTestWidgets/QReadVoltageTestWidget.h \
@@ -441,5 +443,4 @@ C:/Users/aldri/Desktop/crio_gui/crio-gui3/build/crioGui3_autogen/EWIEGA46WW/moc_
   C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/TabWidgets/QCrioViewWidget.h \
   C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/TabWidgets/QMappingViewerWidget.h \
   C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/TabWidgets/QModbusSetupViewer.h \
-  C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/securityHardening/QRamDiskManager.h \
   C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/stringUtils.h

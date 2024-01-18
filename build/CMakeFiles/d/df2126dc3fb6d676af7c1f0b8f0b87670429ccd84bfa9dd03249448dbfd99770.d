@@ -9,7 +9,6 @@ crioGui3_autogen/timestamp: \
   C:/Qt/6.4.0/msvc2019_64/include/QtCore/QDir \
   C:/Qt/6.4.0/msvc2019_64/include/QtCore/QEvent \
   C:/Qt/6.4.0/msvc2019_64/include/QtCore/QFile \
-  C:/Qt/6.4.0/msvc2019_64/include/QtCore/QFileInfo \
   C:/Qt/6.4.0/msvc2019_64/include/QtCore/QFlags \
   C:/Qt/6.4.0/msvc2019_64/include/QtCore/QHash \
   C:/Qt/6.4.0/msvc2019_64/include/QtCore/QIODevice \
@@ -273,9 +272,7 @@ crioGui3_autogen/timestamp: \
   C:/Qt/6.4.0/msvc2019_64/include/QtGui/QMouseEvent \
   C:/Qt/6.4.0/msvc2019_64/include/QtGui/QPainter \
   C:/Qt/6.4.0/msvc2019_64/include/QtGui/QPen \
-  C:/Qt/6.4.0/msvc2019_64/include/QtGui/QPixmap \
   C:/Qt/6.4.0/msvc2019_64/include/QtGui/QRegularExpressionValidator \
-  C:/Qt/6.4.0/msvc2019_64/include/QtGui/QScreen \
   C:/Qt/6.4.0/msvc2019_64/include/QtGui/QTransform \
   C:/Qt/6.4.0/msvc2019_64/include/QtGui/QValidator \
   C:/Qt/6.4.0/msvc2019_64/include/QtGui/QWheelEvent \
@@ -327,7 +324,6 @@ crioGui3_autogen/timestamp: \
   C:/Qt/6.4.0/msvc2019_64/include/QtNetwork/QSslPreSharedKeyAuthenticator \
   C:/Qt/6.4.0/msvc2019_64/include/QtNetwork/QSslSocket \
   C:/Qt/6.4.0/msvc2019_64/include/QtNetwork/QTcpServer \
-  C:/Qt/6.4.0/msvc2019_64/include/QtNetwork/QTcpSocket \
   C:/Qt/6.4.0/msvc2019_64/include/QtNetwork/QtNetwork \
   C:/Qt/6.4.0/msvc2019_64/include/QtNetwork/QtNetworkDepends \
   C:/Qt/6.4.0/msvc2019_64/include/QtNetwork/qabstractnetworkcache.h \
@@ -851,6 +847,8 @@ crioGui3_autogen/timestamp: \
   ../src/BasicWidgets/QBetterCalendar.h \
   ../src/BasicWidgets/QBetterSwitchButton.cpp \
   ../src/BasicWidgets/QBetterSwitchButton.h \
+  ../src/BasicWidgets/QClientsVizu.cpp \
+  ../src/BasicWidgets/QClientsVizu.h \
   ../src/BasicWidgets/QColorButton.cpp \
   ../src/BasicWidgets/QColorButton.h \
   ../src/BasicWidgets/QDonutGauge.cpp \
@@ -912,10 +910,10 @@ crioGui3_autogen/timestamp: \
   ../src/NetWorking/QSSLBaseClient.h \
   ../src/NetWorking/QSSLCommandClient.cpp \
   ../src/NetWorking/QSSLCommandClient.h \
-  ../src/NetWorking/QSSLDebugClient.cpp \
-  ../src/NetWorking/QSSLDebugClient.h \
-  ../src/NetWorking/QTCPDebugClient.cpp \
-  ../src/NetWorking/QTCPDebugClient.h \
+  ../src/NetWorking/QSSLCurrentPoller.cpp \
+  ../src/NetWorking/QSSLCurrentPoller.h \
+  ../src/NetWorking/QSSLVoltagePoller.cpp \
+  ../src/NetWorking/QSSLVoltagePoller.h \
   ../src/NetWorking/certificateinfo.cpp \
   ../src/NetWorking/certificateinfo.h \
   ../src/QSignalAggregator.cpp \
@@ -960,10 +958,6 @@ crioGui3_autogen/timestamp: \
   ../src/TabWidgets/QMappingViewerWidget.h \
   ../src/TabWidgets/QModbusSetupViewer.cpp \
   ../src/TabWidgets/QModbusSetupViewer.h \
-  ../src/securityHardening/QRamDiskManager.cpp \
-  ../src/securityHardening/QRamDiskManager.h \
-  ../src/securityHardening/QSecureScreen.cpp \
-  ../src/securityHardening/QSecureScreen.h \
   ../src/stringUtils.h \
   ../styles.qrc \
   ../mainwindow.ui \

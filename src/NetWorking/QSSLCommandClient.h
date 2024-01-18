@@ -20,7 +20,18 @@ public:
     void sendStopSimulation         ()                                                         ;
     void sendStartModbusAcquisition ()                                                         ;
     void sendStopModbusAcquisition  ()                                                         ;
+    void sendFileUploadRequest      (const QString &filename)                                  ;
+    void sendFileDownloadRequest    (const QString &serverFilename, const QString &localFilename)                                  ;
+    void sendClientListRequest      ()                                                         ;
+    void sendListModulesRequest     ()                                                         ;
 
+
+    void handleFileDownloadResponse (const QString& response)                                  ;
+    void handleFileUploadResponse   (const QString& response)                                  ;
+    void flushServerData();
+protected:
+    QString m_downloadLocalFilename;
+ 
 
 protected Q_SLOTS:
 
@@ -43,6 +54,11 @@ Q_SIGNALS:
 
     void socketConnectedSignal        (const QString &response);
     void socketNotConnectedSignal     (const QString &response);
+    void fileUploadedSignal           (const QString &response);
+    void fileDownloadedSignal         (const QString &response);
+    void clientListSignal             (const QString &response);
+    void listInifilesSignal           (const QString &response);
+    void moduleDownloadedSignal       (const QString &response);
 
 };
 

@@ -12,20 +12,12 @@
 #include <QPushButton>
 #include <QGroupBox>
 #include <QMessageBox>
+#include "../NetWorking/QSSLCommandClient.h"
 #include "../BasicWidgets/QIpAddressEditor.h"
 #include "../stringUtils.h"
 
 
-//Forward declarations may speed up compilation time a bit
-//so the includes are now in cpp file
-class QLineEdit               ;
-class QSpinBox                ;
-class QPushButton             ;
-class QGroupBox               ;
-class QMessageBox             ;
 
-//class QtTcpClient           ;
-class QSSLCommandClient       ;
 
 class QModbusAnalogViewer     ;
 class QMultiLineTextVisualizer;

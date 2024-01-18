@@ -78,7 +78,10 @@ void QSSLBaseClient::setConnected(bool newConnected)
 void QSSLBaseClient::setupSecureSocket()
 {
     if (socket)
-        return;
+    {
+        delete socket;
+        socket = nullptr;
+    }
 
     socket = new QSslSocket(this);
     connect(socket, &QSslSocket::stateChanged,
@@ -91,6 +94,15 @@ void QSSLBaseClient::setupSecureSocket()
             this, &QSSLBaseClient::sslErrors);
     connect(socket, &QSslSocket::readyRead,
             this, &QSSLBaseClient::onDataReceived);
+}
+
+void QSSLBaseClient::socketFlush()
+{
+   // if (socket)
+   // {
+   //     socket->flush();
+   // }
+    socket->readAll();
 }
 
 const QStringList &QSSLBaseClient::LastErrorsList() const
@@ -108,6 +120,14 @@ void QSSLBaseClient::setLastErrorsList(const QStringList &newLastErrorsList)
 
 void QSSLBaseClient::connectToServer(const QString &host, quint16 port, const QString &message)
 {
+    if (socket->state() == QAbstractSocket::ConnectedState)
+    {
+        socket->disconnectFromHost();
+        if (socket->state() != QAbstractSocket::UnconnectedState)
+        {
+            socket->waitForDisconnected();  // Wait for the socket to disconnect
+        }
+    }
     socket->connectToHostEncrypted(host,port);
     updateEnabledState();
 }
@@ -196,5 +216,6 @@ bool QSSLBaseClient::checkConnect(const QString &host, quint16 port)
         return socket->waitForConnected(3000); // Returns true if connected successfully.
     }
     return true; // Already connected.
+
 }
 

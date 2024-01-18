@@ -29,7 +29,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 namespace {
 struct qt_meta_stringdata_QCrioViewWidget_t {
-    uint offsetsAndSizes[162];
+    uint offsetsAndSizes[164];
     char stringdata0[16];
     char stringdata1[24];
     char stringdata2[1];
@@ -110,7 +110,8 @@ struct qt_meta_stringdata_QCrioViewWidget_t {
     char stringdata77[16];
     char stringdata78[18];
     char stringdata79[19];
-    char stringdata80[8];
+    char stringdata80[14];
+    char stringdata81[8];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_QCrioViewWidget_t::offsetsAndSizes) + ofs), len 
@@ -196,7 +197,8 @@ Q_CONSTINIT static const qt_meta_stringdata_QCrioViewWidget_t qt_meta_stringdata
         QT_MOC_LITERAL(1476, 15),  // "moduleListModel"
         QT_MOC_LITERAL(1492, 17),  // "QStringListModel*"
         QT_MOC_LITERAL(1510, 18),  // "crioUDPDebugOutput"
-        QT_MOC_LITERAL(1529, 7)   // "iniPath"
+        QT_MOC_LITERAL(1529, 13),  // "QClientsVizu*"
+        QT_MOC_LITERAL(1543, 7)   // "iniPath"
     },
     "QCrioViewWidget",
     "serverChangeStateSignal",
@@ -278,6 +280,7 @@ Q_CONSTINIT static const qt_meta_stringdata_QCrioViewWidget_t qt_meta_stringdata
     "moduleListModel",
     "QStringListModel*",
     "crioUDPDebugOutput",
+    "QClientsVizu*",
     "iniPath"
 };
 #undef QT_MOC_LITERAL
@@ -381,8 +384,8 @@ Q_CONSTINIT static const uint qt_meta_data_QCrioViewWidget[] = {
       74, 0x80000000 | 75, 0x0001510b, uint(16), 0,
       76, 0x80000000 | 53, 0x0001510b, uint(17), 0,
       77, 0x80000000 | 78, 0x0001510b, uint(18), 0,
-      79, 0x80000000 | 67, 0x0001510b, uint(19), 0,
-      80, QMetaType::QString, 0x00015103, uint(20), 0,
+      79, 0x80000000 | 80, 0x0001510b, uint(19), 0,
+      81, QMetaType::QString, 0x00015103, uint(20), 0,
 
        0        // eod
 };
@@ -427,7 +430,7 @@ Q_CONSTINIT const QMetaObject QCrioViewWidget::staticMetaObject = { {
         // property 'moduleListModel'
         QtPrivate::TypeAndForceComplete<QStringListModel*, std::true_type>,
         // property 'crioUDPDebugOutput'
-        QtPrivate::TypeAndForceComplete<QMultiLineTextVisualizer*, std::true_type>,
+        QtPrivate::TypeAndForceComplete<QClientsVizu*, std::true_type>,
         // property 'iniPath'
         QtPrivate::TypeAndForceComplete<QString, std::true_type>,
         // Q_OBJECT / Q_GADGET
@@ -733,6 +736,8 @@ void QCrioViewWidget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
             *reinterpret_cast<int*>(_a[0]) = qRegisterMetaType< QAction* >(); break;
         case 8:
             *reinterpret_cast<int*>(_a[0]) = qRegisterMetaType< QBetterSwitchButton* >(); break;
+        case 16:
+            *reinterpret_cast<int*>(_a[0]) = qRegisterMetaType< QClientsVizu* >(); break;
         case 1:
             *reinterpret_cast<int*>(_a[0]) = qRegisterMetaType< QIpAddressEditor* >(); break;
         case 14:
@@ -746,7 +751,6 @@ void QCrioViewWidget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
             *reinterpret_cast<int*>(_a[0]) = qRegisterMetaType< QLineEdit* >(); break;
         case 13:
             *reinterpret_cast<int*>(_a[0]) = qRegisterMetaType< QModulesIniListView* >(); break;
-        case 16:
         case 9:
             *reinterpret_cast<int*>(_a[0]) = qRegisterMetaType< QMultiLineTextVisualizer* >(); break;
         case 12:
@@ -780,7 +784,7 @@ else if (_c == QMetaObject::ReadProperty) {
         case 13: *reinterpret_cast< QModulesIniListView**>(_v) = _t->modulesListView(); break;
         case 14: *reinterpret_cast< QLabel**>(_v) = _t->moduleListLabel(); break;
         case 15: *reinterpret_cast< QStringListModel**>(_v) = _t->moduleListModel(); break;
-        case 16: *reinterpret_cast< QMultiLineTextVisualizer**>(_v) = _t->crioUDPDebugOutput(); break;
+        case 16: *reinterpret_cast< QClientsVizu**>(_v) = _t->crioUDPDebugOutput(); break;
         case 17: *reinterpret_cast< QString*>(_v) = _t->iniPath(); break;
         default: break;
         }
@@ -805,7 +809,7 @@ else if (_c == QMetaObject::ReadProperty) {
         case 13: _t->setModulesListView(*reinterpret_cast< QModulesIniListView**>(_v)); break;
         case 14: _t->setModuleListLabel(*reinterpret_cast< QLabel**>(_v)); break;
         case 15: _t->setModuleListModel(*reinterpret_cast< QStringListModel**>(_v)); break;
-        case 16: _t->setCrioUDPDebugOutput(*reinterpret_cast< QMultiLineTextVisualizer**>(_v)); break;
+        case 16: _t->setCrioUDPDebugOutput(*reinterpret_cast< QClientsVizu**>(_v)); break;
         case 17: _t->setIniPath(*reinterpret_cast< QString*>(_v)); break;
         default: break;
         }

@@ -286,7 +286,7 @@ void QCrioViewWidget::onUpdateModelList(QIniTreeWidget *tree, QStringList &modul
     m_modulesListView->setIniTreeWidget(tree);
     m_moduleListModel->setStringList(moduleList);
     m_modulesListView->setModel(m_moduleListModel);
-    m_terminalOutput->addLastOutput("update module list succes");
+    m_terminalOutput->addLastOutput("update module list success");
 }
 
 
@@ -357,6 +357,11 @@ void QCrioViewWidget::onUpdateControlsAfterModulesDownloaded(QCrioModulesDataExt
         m_voltageTestWidget->setPort(commandPort);
         m_voltageTestWidget->tcpConnect();
 
+        m_crioUDPDebugOutput->setHost(m_ipEdit->ipAddress());
+        m_crioUDPDebugOutput->setPort(commandPort);
+        m_crioUDPDebugOutput->sslConnect();
+
+
     }
 }
 
@@ -395,12 +400,12 @@ void QCrioViewWidget::setIniPath(const QString &newIniPath)
     emit iniPathChanged();
 }
 
-QMultiLineTextVisualizer *QCrioViewWidget::crioUDPDebugOutput() const
+QClientsVizu *QCrioViewWidget::crioUDPDebugOutput() const
 {
     return m_crioUDPDebugOutput;
 }
 
-void QCrioViewWidget::setCrioUDPDebugOutput(QMultiLineTextVisualizer *newCrioUDPDebugOutput)
+void QCrioViewWidget::setCrioUDPDebugOutput(QClientsVizu *newCrioUDPDebugOutput)
 {
     m_crioUDPDebugOutput = newCrioUDPDebugOutput;
     emit crioUDPDebugOutputChanged();
@@ -445,7 +450,7 @@ void QCrioViewWidget::setupUi()
     m_currentTestWidget   = new QReadCurrentTestWidget  (this);
     m_voltageTestWidget   = new QReadVoltageTestWidget  (this);
     m_terminalOutput      = new QMultiLineTextVisualizer(this);
-    m_crioUDPDebugOutput  = new QMultiLineTextVisualizer(this);
+    m_crioUDPDebugOutput  = new QClientsVizu("",8222,this);
 
     // Add widgets to the layout
     layout->addWidget(m_ipLabel                     , 0,0,1,1,Qt::AlignHCenter);
@@ -509,7 +514,8 @@ void QCrioViewWidget::setupConnections() {
 
 void QCrioViewWidget::handleConnection()
 {
-    emit sshConnectionAskedSignal();
+
+    Q_EMIT sshConnectionAskedSignal();
 }
 
 
@@ -530,7 +536,7 @@ void QCrioViewWidget::onServerChangeState()
        m_currentTestWidget->onMustDisconnect();
        m_voltageTestWidget->onMustDisconnect();
     }
-    emit serverChangeStateSignal(m_startStopServerSwitchButton->getState());
+    Q_EMIT serverChangeStateSignal(m_startStopServerSwitchButton->getState());
 
 }
 

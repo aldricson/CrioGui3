@@ -119,8 +119,7 @@ private:
     QString  lastCommand     = ""    ;
     bool     m_withLibSSH2   = false ;
 
-    QString encryptData(const QString& dataStr, const QString& keyStr);
-    QString decryptData(const QString& encryptedDataStr, const QString& keyStr);
+
 
 private slots:
     void processFinished(int exitCode, QProcess::ExitStatus exitStatus);

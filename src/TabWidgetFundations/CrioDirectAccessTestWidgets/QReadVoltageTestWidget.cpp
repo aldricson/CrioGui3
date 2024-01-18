@@ -10,12 +10,14 @@ QReadVoltageTestWidget::QReadVoltageTestWidget( QWidget *parent)
     bindTCPClient();
     m_truthOScope->setVerticalScale(-10.0, 10.0);
     m_truthOScope->setHorizontalMaxSamples(60);
+    connect(m_timer, &QTimer::timeout, this, &QReadVoltageTestWidget::onReadOneShotClicked);
 }
 
 
 void QReadVoltageTestWidget::onReadOneShotClicked()
 {
-    emit logLastRequest("readVoltage on " + getModulesComboBox()->currentText() + getChannelComboBox()->currentText());
+    if (m_inPoll) m_timer->stop();
+    Q_EMIT logLastRequest("readVoltage on " + getModulesComboBox()->currentText() + getChannelComboBox()->currentText());
     m_client->sendReadVoltageRequest(m_modulesComboBox->currentText(),m_channelComboBox->currentIndex());
 }
 
@@ -31,7 +33,10 @@ void QReadVoltageTestWidget::onReadDone(const QString &result)
     {
         m_truthOScope->addSample(result.toDouble());
     }
+
     emit logLastResponse(result);
+    if (m_inPoll) m_timer->start();
+
 }
 
 void QReadVoltageTestWidget::bindTCPClient()
@@ -43,10 +48,9 @@ void QReadVoltageTestWidget::bindTCPClient()
 void QReadVoltageTestWidget::onPollClicked()
 {
     m_inPoll =! m_inPoll;
-    m_timer->setInterval(1000);
+    m_timer->setInterval(800);
     m_truthOScope->clearGraph();
-    disconnect(m_timer,0);
-    connect(m_timer, &QTimer::timeout, this, &QReadVoltageTestWidget::onReadOneShotClicked);
+
     if (m_inPoll)
     {
         m_timer->start();
@@ -54,5 +58,6 @@ void QReadVoltageTestWidget::onPollClicked()
     else
     {
         m_timer->stop();
+        m_client->flushServerData();
     }
 }

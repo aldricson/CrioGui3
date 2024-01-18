@@ -8,10 +8,7 @@ set COMMAND=%5
 set PARAMETER1=%6
 set PARAMETER2=%7
 
-:: Check if the command is to get the module list
-if "%COMMAND%" == "getModuleList" (
-    plink -ssh %USER%@%HOST% -P %PORT% -pw %PASS% "cd /home/dataDrill; ls | grep \"^NI.*\.ini$\""
-) else if "%COMMAND%" == "dir" (
+if "%COMMAND%" == "dir" (
     plink -ssh %USER%@%HOST% -P %PORT% -pw %PASS% "cd %PARAMETER1%; ls"
 ) else if "%COMMAND%" == "serverState" (
     plink -ssh %USER%@%HOST% -P %PORT% -pw %PASS% -batch "cd /home/dataDrill; sh dataDrillStatus.sh"

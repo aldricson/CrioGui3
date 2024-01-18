@@ -14,6 +14,7 @@ C:/Users/aldri/Desktop/crio_gui/crio-gui3/build/crioGui3_autogen/DZMYHVTPIZ/moc_
   C:/Qt/6.4.0/msvc2019_64/include/QtCore/QSharedDataPointer \
   C:/Qt/6.4.0/msvc2019_64/include/QtCore/QString \
   C:/Qt/6.4.0/msvc2019_64/include/QtCore/QStringList \
+  C:/Qt/6.4.0/msvc2019_64/include/QtCore/QTimer \
   C:/Qt/6.4.0/msvc2019_64/include/QtCore/QUrl \
   C:/Qt/6.4.0/msvc2019_64/include/QtCore/QVariant \
   C:/Qt/6.4.0/msvc2019_64/include/QtCore/QtCore \

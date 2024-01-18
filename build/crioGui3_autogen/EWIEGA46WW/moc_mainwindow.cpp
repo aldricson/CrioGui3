@@ -29,7 +29,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 namespace {
 struct qt_meta_stringdata_MainWindow_t {
-    uint offsetsAndSizes[66];
+    uint offsetsAndSizes[68];
     char stringdata0[11];
     char stringdata1[11];
     char stringdata2[1];
@@ -37,32 +37,33 @@ struct qt_meta_stringdata_MainWindow_t {
     char stringdata4[12];
     char stringdata5[20];
     char stringdata6[7];
-    char stringdata7[21];
-    char stringdata8[26];
-    char stringdata9[29];
-    char stringdata10[30];
-    char stringdata11[17];
-    char stringdata12[10];
-    char stringdata13[16];
-    char stringdata14[15];
-    char stringdata15[24];
-    char stringdata16[14];
-    char stringdata17[15];
-    char stringdata18[26];
-    char stringdata19[8];
-    char stringdata20[27];
-    char stringdata21[9];
-    char stringdata22[23];
-    char stringdata23[6];
-    char stringdata24[19];
-    char stringdata25[8];
-    char stringdata26[18];
-    char stringdata27[8];
-    char stringdata28[20];
-    char stringdata29[12];
-    char stringdata30[6];
-    char stringdata31[20];
-    char stringdata32[5];
+    char stringdata7[24];
+    char stringdata8[8];
+    char stringdata9[26];
+    char stringdata10[29];
+    char stringdata11[30];
+    char stringdata12[17];
+    char stringdata13[10];
+    char stringdata14[16];
+    char stringdata15[15];
+    char stringdata16[24];
+    char stringdata17[14];
+    char stringdata18[15];
+    char stringdata19[26];
+    char stringdata20[8];
+    char stringdata21[27];
+    char stringdata22[9];
+    char stringdata23[23];
+    char stringdata24[6];
+    char stringdata25[19];
+    char stringdata26[8];
+    char stringdata27[18];
+    char stringdata28[8];
+    char stringdata29[20];
+    char stringdata30[12];
+    char stringdata31[6];
+    char stringdata32[20];
+    char stringdata33[5];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_MainWindow_t::offsetsAndSizes) + ofs), len 
@@ -75,32 +76,33 @@ Q_CONSTINIT static const qt_meta_stringdata_MainWindow_t qt_meta_stringdata_Main
         QT_MOC_LITERAL(35, 11),  // "lastCommand"
         QT_MOC_LITERAL(47, 19),  // "onLsCommandExecuted"
         QT_MOC_LITERAL(67, 6),  // "output"
-        QT_MOC_LITERAL(74, 20),  // "onModuleListRetrived"
-        QT_MOC_LITERAL(95, 25),  // "onModuleIniFileDownloaded"
-        QT_MOC_LITERAL(121, 28),  // "onModubusParamFileDownloaded"
-        QT_MOC_LITERAL(150, 29),  // "onModbusMappingFileDownloaded"
-        QT_MOC_LITERAL(180, 16),  // "onServerGetState"
-        QT_MOC_LITERAL(197, 9),  // "isRunning"
-        QT_MOC_LITERAL(207, 15),  // "onServerStarted"
-        QT_MOC_LITERAL(223, 14),  // "onServerStoped"
-        QT_MOC_LITERAL(238, 23),  // "onServerStartSuccesfull"
-        QT_MOC_LITERAL(262, 13),  // "screenSession"
-        QT_MOC_LITERAL(276, 14),  // "onAccessDenied"
-        QT_MOC_LITERAL(291, 25),  // "onCommandServerLogRequest"
-        QT_MOC_LITERAL(317, 7),  // "request"
-        QT_MOC_LITERAL(325, 26),  // "onCommandServerLogResponse"
-        QT_MOC_LITERAL(352, 8),  // "response"
-        QT_MOC_LITERAL(361, 22),  // "onCommanServerLogError"
-        QT_MOC_LITERAL(384, 5),  // "error"
-        QT_MOC_LITERAL(390, 18),  // "onCrioDebugMessage"
-        QT_MOC_LITERAL(409, 7),  // "message"
-        QT_MOC_LITERAL(417, 17),  // "onBlockDirectRead"
-        QT_MOC_LITERAL(435, 7),  // "blocked"
-        QT_MOC_LITERAL(443, 19),  // "onModuleListUpdated"
-        QT_MOC_LITERAL(463, 11),  // "QModelIndex"
-        QT_MOC_LITERAL(475, 5),  // "index"
-        QT_MOC_LITERAL(481, 19),  // "onServerChangeState"
-        QT_MOC_LITERAL(501, 4)   // "isOn"
+        QT_MOC_LITERAL(74, 23),  // "onNewModuleListRetrived"
+        QT_MOC_LITERAL(98, 7),  // "iniList"
+        QT_MOC_LITERAL(106, 25),  // "onModuleIniFileDownloaded"
+        QT_MOC_LITERAL(132, 28),  // "onModubusParamFileDownloaded"
+        QT_MOC_LITERAL(161, 29),  // "onModbusMappingFileDownloaded"
+        QT_MOC_LITERAL(191, 16),  // "onServerGetState"
+        QT_MOC_LITERAL(208, 9),  // "isRunning"
+        QT_MOC_LITERAL(218, 15),  // "onServerStarted"
+        QT_MOC_LITERAL(234, 14),  // "onServerStoped"
+        QT_MOC_LITERAL(249, 23),  // "onServerStartSuccesfull"
+        QT_MOC_LITERAL(273, 13),  // "screenSession"
+        QT_MOC_LITERAL(287, 14),  // "onAccessDenied"
+        QT_MOC_LITERAL(302, 25),  // "onCommandServerLogRequest"
+        QT_MOC_LITERAL(328, 7),  // "request"
+        QT_MOC_LITERAL(336, 26),  // "onCommandServerLogResponse"
+        QT_MOC_LITERAL(363, 8),  // "response"
+        QT_MOC_LITERAL(372, 22),  // "onCommanServerLogError"
+        QT_MOC_LITERAL(395, 5),  // "error"
+        QT_MOC_LITERAL(401, 18),  // "onCrioDebugMessage"
+        QT_MOC_LITERAL(420, 7),  // "message"
+        QT_MOC_LITERAL(428, 17),  // "onBlockDirectRead"
+        QT_MOC_LITERAL(446, 7),  // "blocked"
+        QT_MOC_LITERAL(454, 19),  // "onModuleListUpdated"
+        QT_MOC_LITERAL(474, 11),  // "QModelIndex"
+        QT_MOC_LITERAL(486, 5),  // "index"
+        QT_MOC_LITERAL(492, 19),  // "onServerChangeState"
+        QT_MOC_LITERAL(512, 4)   // "isOn"
     },
     "MainWindow",
     "onSSHError",
@@ -109,7 +111,8 @@ Q_CONSTINIT static const qt_meta_stringdata_MainWindow_t qt_meta_stringdata_Main
     "lastCommand",
     "onLsCommandExecuted",
     "output",
-    "onModuleListRetrived",
+    "onNewModuleListRetrived",
+    "iniList",
     "onModuleIniFileDownloaded",
     "onModubusParamFileDownloaded",
     "onModbusMappingFileDownloaded",
@@ -155,42 +158,42 @@ Q_CONSTINIT static const uint qt_meta_data_MainWindow[] = {
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
        1,    2,  122,    2, 0x08,    1 /* Private */,
        5,    2,  127,    2, 0x08,    4 /* Private */,
-       7,    2,  132,    2, 0x08,    7 /* Private */,
-       8,    2,  137,    2, 0x08,   10 /* Private */,
-       9,    2,  142,    2, 0x08,   13 /* Private */,
-      10,    2,  147,    2, 0x08,   16 /* Private */,
-      11,    2,  152,    2, 0x08,   19 /* Private */,
-      13,    1,  157,    2, 0x08,   22 /* Private */,
-      14,    1,  160,    2, 0x08,   24 /* Private */,
-      15,    2,  163,    2, 0x08,   26 /* Private */,
-      17,    1,  168,    2, 0x08,   29 /* Private */,
-      18,    1,  171,    2, 0x08,   31 /* Private */,
-      20,    1,  174,    2, 0x08,   33 /* Private */,
-      22,    1,  177,    2, 0x08,   35 /* Private */,
-      24,    1,  180,    2, 0x08,   37 /* Private */,
-      26,    1,  183,    2, 0x08,   39 /* Private */,
-      28,    1,  186,    2, 0x08,   41 /* Private */,
-      31,    1,  189,    2, 0x08,   43 /* Private */,
+       7,    1,  132,    2, 0x08,    7 /* Private */,
+       9,    2,  135,    2, 0x08,    9 /* Private */,
+      10,    2,  140,    2, 0x08,   12 /* Private */,
+      11,    2,  145,    2, 0x08,   15 /* Private */,
+      12,    2,  150,    2, 0x08,   18 /* Private */,
+      14,    1,  155,    2, 0x08,   21 /* Private */,
+      15,    1,  158,    2, 0x08,   23 /* Private */,
+      16,    2,  161,    2, 0x08,   25 /* Private */,
+      18,    1,  166,    2, 0x08,   28 /* Private */,
+      19,    1,  169,    2, 0x08,   30 /* Private */,
+      21,    1,  172,    2, 0x08,   32 /* Private */,
+      23,    1,  175,    2, 0x08,   34 /* Private */,
+      25,    1,  178,    2, 0x08,   36 /* Private */,
+      27,    1,  181,    2, 0x08,   38 /* Private */,
+      29,    1,  184,    2, 0x08,   40 /* Private */,
+      32,    1,  187,    2, 0x08,   42 /* Private */,
 
  // slots: parameters
     QMetaType::Void, QMetaType::QString, QMetaType::QString,    3,    4,
     QMetaType::Void, QMetaType::QString, QMetaType::QString,    6,    4,
+    QMetaType::Void, QMetaType::QString,    8,
     QMetaType::Void, QMetaType::QString, QMetaType::QString,    6,    4,
     QMetaType::Void, QMetaType::QString, QMetaType::QString,    6,    4,
     QMetaType::Void, QMetaType::QString, QMetaType::QString,    6,    4,
-    QMetaType::Void, QMetaType::QString, QMetaType::QString,    6,    4,
-    QMetaType::Void, QMetaType::Bool, QMetaType::QString,   12,    4,
+    QMetaType::Void, QMetaType::Bool, QMetaType::QString,   13,    4,
     QMetaType::Void, QMetaType::QString,    4,
     QMetaType::Void, QMetaType::QString,    4,
-    QMetaType::Void, QMetaType::Int, QMetaType::QString,   16,    4,
+    QMetaType::Void, QMetaType::Int, QMetaType::QString,   17,    4,
     QMetaType::Void, QMetaType::QString,    4,
-    QMetaType::Void, QMetaType::QString,   19,
-    QMetaType::Void, QMetaType::QString,   21,
-    QMetaType::Void, QMetaType::QString,   23,
-    QMetaType::Void, QMetaType::QString,   25,
-    QMetaType::Void, QMetaType::Bool,   27,
-    QMetaType::Void, 0x80000000 | 29,   30,
-    QMetaType::Void, QMetaType::Bool,   32,
+    QMetaType::Void, QMetaType::QString,   20,
+    QMetaType::Void, QMetaType::QString,   22,
+    QMetaType::Void, QMetaType::QString,   24,
+    QMetaType::Void, QMetaType::QString,   26,
+    QMetaType::Void, QMetaType::Bool,   28,
+    QMetaType::Void, 0x80000000 | 30,   31,
+    QMetaType::Void, QMetaType::Bool,   33,
 
        0        // eod
 };
@@ -212,9 +215,8 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
         QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
-        // method 'onModuleListRetrived'
+        // method 'onNewModuleListRetrived'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
         QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
         // method 'onModuleIniFileDownloaded'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
@@ -278,7 +280,7 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         switch (_id) {
         case 0: _t->onSSHError((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2]))); break;
         case 1: _t->onLsCommandExecuted((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2]))); break;
-        case 2: _t->onModuleListRetrived((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2]))); break;
+        case 2: _t->onNewModuleListRetrived((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
         case 3: _t->onModuleIniFileDownloaded((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2]))); break;
         case 4: _t->onModubusParamFileDownloaded((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2]))); break;
         case 5: _t->onModbusMappingFileDownloaded((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2]))); break;

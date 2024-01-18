@@ -62,35 +62,6 @@ QSSHCommand::QSSHCommand(const QString &md5Hash,const QString &executionPath, QO
     });
 }
 
-QString QSSHCommand::encryptData(const QString& dataStr, const QString& keyStr)
-{
-    QByteArray data = dataStr.toUtf8();
-    QByteArray key = keyStr.toUtf8();
-    QByteArray result;
-    result.reserve(data.size());
-
-    for (int i = 0; i < data.size(); ++i) {
-        result.append(data[i] ^ key[i % key.size()]);
-    }
-
-    // Convertir le résultat en base64 pour un stockage / transmission sûrs
-    return result.toBase64();
-}
-
-QString QSSHCommand::decryptData(const QString& encryptedDataStr, const QString& keyStr)
-{
-    QByteArray encryptedData = QByteArray::fromBase64(encryptedDataStr.toUtf8());
-    QByteArray key = keyStr.toUtf8();
-    QByteArray result;
-    result.reserve(encryptedData.size());
-
-    for (int i = 0; i < encryptedData.size(); ++i) {
-        result.append(encryptedData[i] ^ key[i % key.size()]);
-    }
-
-    return QString::fromUtf8(result);
-}
-
 
 
 /**
@@ -120,46 +91,12 @@ void QSSHCommand::processFinished(int exitCode, QProcess::ExitStatus exitStatus)
     }
 
 
-    QFile inputFile(m_executionPath+"ssh.bat");
-    if (inputFile.open(QIODevice::ReadOnly))
-    {
-        QTextStream in(&inputFile);
-        QString fileContents = in.readAll(); // Read all contents into a string
-
-        if (fileContents.startsWith("@echo off"))
-        {
-            QString encrypted = encryptData(fileContents,m_hashMd5);
-            qInfo()<<"encrypted file:\n"<<encrypted;
-            fileContents = encrypted;
-
-            // Path to the output file in the application directory
-            QString outputPath = m_executionPath + "ssh.bat";
-
-            // Open the output file
-            QFile outputFile(outputPath);
-            if (outputFile.open(QIODevice::WriteOnly))
-            {
-                QTextStream out(&outputFile);
-                out << fileContents; // Write the contents to the output file
-
-            }
-            outputFile.close();
-        }
-    }
-    inputFile.close();
-
-
     // Check which command was executed last and Q_EMIT the corresponding signal.
     // Each if/else if block handles a different command.
     // Handling 'dir' command - used for listing directory contents.
     if (lastCommand == "dir")
     {
         Q_EMIT listFileDoneSignal(output, lastCommand);
-    }
-    // Handling 'getModuleList' command - used to retrieve a list of modules.
-    else if (lastCommand == "getModuleList")
-    {
-        Q_EMIT moduleListRetrievedSignal(output, lastCommand);
     }
     // Handling 'downloadModule' command - used for downloading module definitions.
     else if (lastCommand == "downloadModule")
@@ -252,7 +189,7 @@ void QSSHCommand::sendCommand(const QString &command, const QString &parameter)
     {
        lastCommand = command; // Store the command
        QString commandLine = constructSSHCommand(command, parameter);
-       if (lastCommand=="downloadModbusMapping" || lastCommand == "uploadModbusMapping" )
+       if (lastCommand=="downloadModbusMapping" || lastCommand == "uploadModbusMapping" || lastCommand == "downloadModbusSetup" )
        {
            qInfo()<<commandLine;
        }
@@ -333,17 +270,7 @@ void QSSHCommand::setUserName(const QString &newUserName)
     Q_EMIT userNameChanged();
 }
 
-void QSSHCommand::getModulesDefinitions()
-{
-    if (!m_withLibSSH2)
-    {
-        sendCommand("getModuleList", "");
-    }
-    else
-    {
-        //TODO
-    }
-}
+
 
 void QSSHCommand::downloadModulesDefinitions(QString params)
 {
@@ -361,7 +288,7 @@ void QSSHCommand::downloadModbusSetup(QString iniModbusSetupPath)
 {
     if (!m_withLibSSH2)
     {
-        QString params = "/home/dataDrill/modBus.ini "+iniModbusSetupPath+"modBus.ini";
+        QString params = "/home/dataDrill/modbus.ini "+iniModbusSetupPath+"modbus.ini";
         sendCommand("downloadModbusSetup", params);
     }
     else
@@ -539,22 +466,6 @@ bool QSSHCommand::checkIntegrity()
         QTextStream in(&inputFile);
         QString fileContents = in.readAll(); // Read all contents into a string
 
-        if (!fileContents.startsWith("@echo off"))
-        {
-            QString decrypted = decryptData(fileContents,m_hashMd5);
-            qInfo()<<"decrypted file:\n"<<decrypted;
-            fileContents = decrypted;
-
-            // Open the output file
-            QFile outputFile2(m_executionPath+"ssh.bat");
-            if (outputFile2.open(QIODevice::WriteOnly))
-            {
-                QTextStream out2(&outputFile2);
-                out2 << fileContents; // Write the contents to the output file
-
-            }
-            outputFile2.close();
-        }
 
         // Calculate MD5 hash
         QByteArray hash = QCryptographicHash::hash(fileContents.toUtf8(), QCryptographicHash::Md5);

@@ -10,11 +10,12 @@ QReadCurrentTestWidget::QReadCurrentTestWidget( QWidget *parent)
     bindTCPClient();
     m_truthOScope->setVerticalScale(0.0, 0.005);
     m_truthOScope->setHorizontalMaxSamples(60);
+    connect(m_timer, &QTimer::timeout, this, &QReadCurrentTestWidget::onReadOneShotClicked);
 }
 
 void QReadCurrentTestWidget::onReadOneShotClicked()
 {
-
+    if (m_inPoll) m_timer->stop();
     emit logLastRequest("readCurrent on " + getModulesComboBox()->currentText() + getChannelComboBox()->currentText());
     m_client->sendReadCurrentRequest(m_modulesComboBox->currentText(),m_channelComboBox->currentIndex());
 }
@@ -22,10 +23,9 @@ void QReadCurrentTestWidget::onReadOneShotClicked()
 void QReadCurrentTestWidget::onPollClicked()
 {
     m_inPoll =! m_inPoll;
-    m_timer->setInterval(1000);
+    m_timer->setInterval(800);
     m_truthOScope->clearGraph();
-    disconnect(m_timer,0);
-    connect(m_timer, &QTimer::timeout, this, &QReadCurrentTestWidget::onReadOneShotClicked);
+
     if (m_inPoll)
     {
         m_timer->start();
@@ -33,6 +33,7 @@ void QReadCurrentTestWidget::onPollClicked()
     else
     {
         m_timer->stop();
+        m_client->flushServerData();
     }
 }
 
@@ -44,10 +45,16 @@ void QReadCurrentTestWidget::onReadDone(const QString &result)
         return;
     }
     m_resultLabel->setText(result);
-    if (m_truthOScope) {
+    if (m_truthOScope)
+    {
         m_truthOScope->addSample(result.toDouble());
     }
     emit logLastResponse(result);
+    QEventLoop loop;
+    QTimer::singleShot(250, &loop, &QEventLoop::quit);
+    loop.exec();
+    if (m_inPoll) m_timer->start();
+
 }
 
 void QReadCurrentTestWidget::bindTCPClient()

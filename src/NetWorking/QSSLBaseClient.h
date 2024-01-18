@@ -14,6 +14,8 @@ class QSSLBaseClient : public QObject {
     Q_PROPERTY(QString cipher READ cipher WRITE setCipher NOTIFY cipherChangedSignal)
     Q_PROPERTY(bool unconnected READ unconnected WRITE setUnconnected NOTIFY unconnectedChanged)
     Q_PROPERTY(bool connected READ connected WRITE setConnected NOTIFY connectedChanged)
+    Q_PROPERTY(QStringList LastErrorsList READ LastErrorsList WRITE setLastErrorsList NOTIFY LastErrorsListChanged)
+
 
 public:
     explicit QSSLBaseClient(QString clientName,QObject *parent = nullptr);
@@ -35,6 +37,9 @@ public:
 
     const QStringList &LastErrorsList() const;
     void setLastErrorsList(const QStringList &newLastErrorsList);
+
+    void socketFlush();
+
 
 Q_SIGNALS:
     void hostChanged();
@@ -62,6 +67,7 @@ protected:
     bool        m_connected   = false;
     QStringList m_LastErrorsList;
 
+
 public Q_SLOTS:
 
     void connectToServer(const QString &host, quint16 port,const QString &message);
@@ -80,7 +86,6 @@ protected Q_SLOTS:
     virtual bool checkConnect       (const QString &host, quint16 port)       ;
 
 private:
-    Q_PROPERTY(QStringList LastErrorsList READ LastErrorsList WRITE setLastErrorsList NOTIFY LastErrorsListChanged)
 };
 
 #endif // QSSLBASECLIENT_H

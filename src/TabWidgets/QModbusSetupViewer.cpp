@@ -5,17 +5,9 @@
 #include "../BasicWidgets/QMultiLineTextVisualizer.h"
 #include "../NetWorking/QModbusCrioClient.h"
 
-//#include "NetWorking/QtTcpClient.h"
-#include "../NetWorking/QSSLCommandClient.h"
 
 #include "../TabWidgetFundations/ModbusWidgets/QModbusAnalogViewer.h"
 
-class QFormLayout ;
-class QLabel      ;
-class QLineEdit   ;
-class QPushButton ;
-class QGroupBox   ;
-class QMessageBox ;
 
 QModbusSetupViewer::QModbusSetupViewer(QWidget *parent)
     : QWidget(parent)

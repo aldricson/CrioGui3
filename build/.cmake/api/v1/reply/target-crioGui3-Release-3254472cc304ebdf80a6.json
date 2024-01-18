@@ -1,0 +1,1382 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "crioGui3.exe"
+		},
+		{
+			"path" : "crioGui3.pdb"
+		}
+	],
+	"backtrace" : 4,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"_qt_internal_create_executable",
+			"qt6_add_executable",
+			"qt_add_executable",
+			"target_link_libraries"
+		],
+		"files" : 
+		[
+			"C:/Qt/6.4.0/msvc2019_64/lib/cmake/Qt6Core/Qt6CoreMacros.cmake",
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 56,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 713,
+				"parent" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 550,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 586,
+				"parent" : 3
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 551,
+				"parent" : 2
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 69,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /O2 /Ob2 /DNDEBUG -MD"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-Zc:__cplusplus"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-permissive-"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-utf-8"
+				},
+				{
+					"fragment" : "-std:c++17"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 6,
+					"define" : "QT_CHARTS_LIB"
+				},
+				{
+					"backtrace" : 6,
+					"define" : "QT_CONCURRENT_LIB"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "QT_CORE_LIB"
+				},
+				{
+					"backtrace" : 6,
+					"define" : "QT_GUI_LIB"
+				},
+				{
+					"backtrace" : 6,
+					"define" : "QT_NETWORK_LIB"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "QT_NO_DEBUG"
+				},
+				{
+					"backtrace" : 6,
+					"define" : "QT_OPENGLWIDGETS_LIB"
+				},
+				{
+					"backtrace" : 6,
+					"define" : "QT_OPENGL_LIB"
+				},
+				{
+					"backtrace" : 6,
+					"define" : "QT_SERIALBUS_LIB"
+				},
+				{
+					"backtrace" : 6,
+					"define" : "QT_SERIALPORT_LIB"
+				},
+				{
+					"backtrace" : 6,
+					"define" : "QT_WIDGETS_LIB"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "UNICODE"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "WIN32"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "WIN64"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "_ENABLE_EXTENDED_ALIGNED_STORAGE"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "_UNICODE"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "_WIN64"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"path" : "C:/Users/aldri/Desktop/crio_gui/crio-gui3/build"
+				},
+				{
+					"path" : "C:/Users/aldri/Desktop/crio_gui/crio-gui3"
+				},
+				{
+					"backtrace" : 0,
+					"path" : "C:/Users/aldri/Desktop/crio_gui/crio-gui3/build/crioGui3_autogen/include"
+				},
+				{
+					"backtrace" : 5,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.4.0/msvc2019_64/include/QtCore"
+				},
+				{
+					"backtrace" : 5,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.4.0/msvc2019_64/include"
+				},
+				{
+					"backtrace" : 5,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.4.0/msvc2019_64/mkspecs/win32-msvc"
+				},
+				{
+					"backtrace" : 6,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.4.0/msvc2019_64/include/QtGui"
+				},
+				{
+					"backtrace" : 6,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.4.0/msvc2019_64/include/QtNetwork"
+				},
+				{
+					"backtrace" : 6,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.4.0/msvc2019_64/include/QtWidgets"
+				},
+				{
+					"backtrace" : 6,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.4.0/msvc2019_64/include/QtConcurrent"
+				},
+				{
+					"backtrace" : 6,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.4.0/msvc2019_64/include/QtCharts"
+				},
+				{
+					"backtrace" : 6,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.4.0/msvc2019_64/include/QtOpenGL"
+				},
+				{
+					"backtrace" : 6,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.4.0/msvc2019_64/include/QtOpenGLWidgets"
+				},
+				{
+					"backtrace" : 6,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.4.0/msvc2019_64/include/QtSerialBus"
+				},
+				{
+					"backtrace" : 6,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.4.0/msvc2019_64/include/QtSerialPort"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					5,
+					5
+				],
+				"standard" : "17"
+			},
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				65,
+				66,
+				67,
+				68,
+				69,
+				70,
+				71,
+				72,
+				73,
+				74,
+				75,
+				76,
+				77,
+				78,
+				79,
+				80,
+				81,
+				82,
+				83,
+				84,
+				85,
+				86,
+				87,
+				88,
+				89,
+				90,
+				91,
+				92,
+				93,
+				94,
+				95,
+				96,
+				97,
+				98,
+				99,
+				100,
+				101,
+				102,
+				103,
+				104,
+				105,
+				106,
+				107,
+				108,
+				109,
+				110,
+				111,
+				112,
+				113,
+				114,
+				115,
+				116,
+				117,
+				118,
+				119,
+				120,
+				127,
+				128,
+				129,
+				130
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 0,
+			"id" : "crioGui3_autogen::@6890427a1f51a3e7e1df"
+		},
+		{
+			"id" : "crioGui3_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
+		}
+	],
+	"id" : "crioGui3::@6890427a1f51a3e7e1df",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /O2 /Ob2 /DNDEBUG -MD",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "/machine:x64 /INCREMENTAL:NO /subsystem:windows",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "-DYNAMICBASE",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "-NXCOMPAT",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "-LARGEADDRESSAWARE",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "-OPT:REF",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "-OPT:ICF",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "-GUARD:CF",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "C:\\Qt\\6.4.0\\msvc2019_64\\lib\\Qt6Concurrent.lib",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "C:\\Qt\\6.4.0\\msvc2019_64\\lib\\Qt6Charts.lib",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "C:\\Qt\\6.4.0\\msvc2019_64\\lib\\Qt6OpenGLWidgets.lib",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "C:\\Qt\\6.4.0\\msvc2019_64\\lib\\Qt6Widgets.lib",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "C:\\Qt\\6.4.0\\msvc2019_64\\lib\\Qt6OpenGL.lib",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "C:\\Qt\\6.4.0\\msvc2019_64\\lib\\Qt6Gui.lib",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "d3d11.lib",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "dxgi.lib",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "dxguid.lib",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "user32.lib",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "C:\\Qt\\6.4.0\\msvc2019_64\\lib\\Qt6SerialBus.lib",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "C:\\Qt\\6.4.0\\msvc2019_64\\lib\\Qt6Network.lib",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "ws2_32.lib",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "C:\\Qt\\6.4.0\\msvc2019_64\\lib\\Qt6SerialPort.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "C:\\Qt\\6.4.0\\msvc2019_64\\lib\\Qt6Core.lib",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "mpr.lib",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "userenv.lib",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "C:\\Qt\\6.4.0\\msvc2019_64\\lib\\Qt6EntryPoint.lib",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "shell32.lib",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "crioGui3",
+	"nameOnDisk" : "crioGui3.exe",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				65,
+				66,
+				67,
+				68,
+				69,
+				70,
+				71,
+				72,
+				73,
+				74,
+				75,
+				76,
+				77,
+				78,
+				79,
+				80,
+				81,
+				82,
+				83,
+				84,
+				85,
+				86,
+				87,
+				88,
+				89,
+				90,
+				91,
+				92,
+				93,
+				94,
+				95,
+				96,
+				97,
+				98,
+				99,
+				100,
+				101,
+				102,
+				103,
+				104,
+				105,
+				106,
+				107,
+				108,
+				109,
+				110,
+				111,
+				112,
+				113,
+				114,
+				115,
+				116,
+				117,
+				118,
+				119,
+				120,
+				127,
+				128,
+				129,
+				130
+			]
+		},
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				3,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32,
+				33,
+				34,
+				35,
+				36,
+				37,
+				38,
+				39,
+				40,
+				41,
+				42,
+				43,
+				44,
+				45,
+				46,
+				47,
+				48,
+				49,
+				50,
+				51,
+				52,
+				53,
+				54,
+				55,
+				56,
+				57,
+				58,
+				59,
+				60,
+				61,
+				62,
+				63,
+				64,
+				125
+			]
+		},
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				4,
+				121,
+				122,
+				123,
+				124,
+				126
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				131,
+				132,
+				133,
+				134,
+				135
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 0,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/crioGui3_autogen/mocs_compilation.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "main.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "mainwindow.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "mainwindow.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "mainwindow.ui",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/BasicWidgets/QBetterCalendar.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/BasicWidgets/QBetterSwitchButton.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/BasicWidgets/QClientsVizu.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/BasicWidgets/QColorButton.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/BasicWidgets/QDonutGauge.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/BasicWidgets/QIniTreeWidget.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/BasicWidgets/QInputUnitCombobox.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/BasicWidgets/QIpAddressEditor.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/BasicWidgets/QMultiLineTextVisualizer.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/BasicWidgets/QOScope.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/BasicWidgets/QOutputUnitCombobox.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/BasicWidgets/QRectFWidget.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/BasicWidgets/QRectWidget.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/BasicWidgets/QSizeFWidget.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/BasicWidgets/QSizeWidget.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/BasicWidgets/QUnitDispatcher.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/BasicWidgets/QValueSearchBox.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/BasicWidgets/QWaitWindow.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/Extractors/QCrioModulesDataExtractor.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/Globals/globalEnumSpace.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/Globals/globalFilePath.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/Globals/globalStringHelper.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/Helpers/iniObject.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/NISpecifics/NI9208.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/NISpecifics/NI9239.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/NISpecifics/NI9411.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/NISpecifics/NI9423.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/NISpecifics/NI9481.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/NISpecifics/NIDAQmx.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/NISpecifics/NIDeviceModule.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/NISpecifics/NIDeviceModuleFactory.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/NetWorking/QModbusCrioClient.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/NetWorking/QSSHCommand.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/NetWorking/QSSLBaseClient.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/NetWorking/QSSLCommandClient.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/NetWorking/QSSLCurrentPoller.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/NetWorking/QSSLVoltagePoller.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/NetWorking/certificateinfo.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/QSignalAggregator.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/TabWidgetFundations/CrioDirectAccessTestWidgets/QBaseAnalogReaderTestWidget.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/TabWidgetFundations/CrioDirectAccessTestWidgets/QReadCurrentTestWidget.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/TabWidgetFundations/CrioDirectAccessTestWidgets/QReadVoltageTestWidget.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/TabWidgetFundations/CrioGeneralParameters/QCrioBaseCpuWidget.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/TabWidgetFundations/CrioGeneralParameters/QCrioDataDrillCpuWidget.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/TabWidgetFundations/CrioGeneralParameters/QCrioHDDWidget.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/TabWidgetFundations/CrioGeneralParameters/QCrioTotalCpuWidget.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/TabWidgetFundations/CrioGeneralParameters/QCrioTotalRamWidget.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/TabWidgetFundations/CrioGeneralParameters/QDataDrillHDDWidget.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/TabWidgetFundations/CrioGeneralParameters/QDataDrillRamWidget.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/TabWidgetFundations/ModbusMaping/QBackUpWidget.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/TabWidgetFundations/ModbusMaping/QMappingRowWidget.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/TabWidgetFundations/ModbusWidgets/QModbusAnalogChannelViewer.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/TabWidgetFundations/ModbusWidgets/QModbusAnalogViewer.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/TabWidgetFundations/Modules/QModulesIniListView.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/TabWidgets/QCrioViewWidget.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/TabWidgets/QDeviceParametersWidget.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/TabWidgets/QGlobalParametersWidget.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/TabWidgets/QMappingViewerWidget.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/TabWidgets/QModbusSetupViewer.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/stringUtils.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/BasicWidgets/QBetterCalendar.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/BasicWidgets/QBetterSwitchButton.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/BasicWidgets/QClientsVizu.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/BasicWidgets/QColorButton.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/BasicWidgets/QDonutGauge.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/BasicWidgets/QIniTreeWidget.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/BasicWidgets/QInputUnitCombobox.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/BasicWidgets/QIpAddressEditor.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/BasicWidgets/QMultiLineTextVisualizer.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/BasicWidgets/QOScope.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/BasicWidgets/QOutputUnitCombobox.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/BasicWidgets/QRectFWidget.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/BasicWidgets/QRectWidget.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/BasicWidgets/QSizeFWidget.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/BasicWidgets/QSizeWidget.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/BasicWidgets/QUnitDispatcher.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/BasicWidgets/QValueSearchBox.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/BasicWidgets/QWaitWindow.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/Extractors/QCrioModulesDataExtractor.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/Globals/globalFilePath.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/Helpers/iniObject.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/NISpecifics/NI9208.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/NISpecifics/NI9239.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/NISpecifics/NI9411.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/NISpecifics/NI9423.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/NISpecifics/NI9481.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/NISpecifics/NIDeviceModule.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/NISpecifics/NIDeviceModuleFactory.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/NetWorking/QModbusCrioClient.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/NetWorking/QSSHCommand.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/NetWorking/QSSLBaseClient.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/NetWorking/QSSLCommandClient.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/NetWorking/QSSLCurrentPoller.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/NetWorking/QSSLVoltagePoller.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/NetWorking/certificateinfo.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/QSignalAggregator.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/TabWidgetFundations/CrioDirectAccessTestWidgets/QBaseAnalogReaderTestWidget.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/TabWidgetFundations/CrioDirectAccessTestWidgets/QReadCurrentTestWidget.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/TabWidgetFundations/CrioDirectAccessTestWidgets/QReadVoltageTestWidget.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/TabWidgetFundations/CrioGeneralParameters/QCrioBaseCpuWidget.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/TabWidgetFundations/CrioGeneralParameters/QCrioDataDrillCpuWidget.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/TabWidgetFundations/CrioGeneralParameters/QCrioHDDWidget.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/TabWidgetFundations/CrioGeneralParameters/QCrioTotalCpuWidget.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/TabWidgetFundations/CrioGeneralParameters/QCrioTotalRamWidget.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/TabWidgetFundations/CrioGeneralParameters/QDataDrillHDDWidget.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/TabWidgetFundations/CrioGeneralParameters/QDataDrillRamWidget.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/TabWidgetFundations/ModbusMaping/QBackUpWidget.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/TabWidgetFundations/ModbusMaping/QMappingRowWidget.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/TabWidgetFundations/ModbusWidgets/QModbusAnalogChannelViewer.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/TabWidgetFundations/ModbusWidgets/QModbusAnalogViewer.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/TabWidgetFundations/Modules/QModulesIniListView.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/TabWidgets/QCrioViewWidget.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/TabWidgets/QDeviceParametersWidget.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/TabWidgets/QGlobalParametersWidget.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/TabWidgets/QMappingViewerWidget.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/TabWidgets/QModbusSetupViewer.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "styles.qrc",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "crio-gui2.qrc",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "scripts.qrc",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "imdisk.qrc",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/crioGui3_autogen/include/ui_mainwindow.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/crioGui3_autogen/timestamp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 0,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/crioGui3_autogen/EWIEGA46WW/qrc_styles.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/crioGui3_autogen/EWIEGA46WW/qrc_crio-gui2.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/crioGui3_autogen/EWIEGA46WW/qrc_scripts.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/crioGui3_autogen/EWIEGA46WW/qrc_imdisk.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/crioGui3_autogen/timestamp.rule",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/crioGui3_autogen/EWIEGA46WW/qrc_styles.cpp.rule",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/crioGui3_autogen/EWIEGA46WW/qrc_crio-gui2.cpp.rule",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/crioGui3_autogen/EWIEGA46WW/qrc_scripts.cpp.rule",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/crioGui3_autogen/EWIEGA46WW/qrc_imdisk.cpp.rule",
+			"sourceGroupIndex" : 3
+		}
+	],
+	"type" : "EXECUTABLE"
+}

@@ -25,14 +25,12 @@
 #include "./src/TabWidgets/QModbusSetupViewer.h"
 #include "./src/TabWidgets/QCrioViewWidget.h"
 #include "./src/TabWidgets/QMappingViewerWidget.h"
-#include "./src/securityHardening/QRamDiskManager.h"
 
 class QProgressBar            ;
 class QMessageBox             ;
 class QPushButton             ;
 class QLabel                  ;
 class QTabWidget              ;
-class QTCPDebugClient         ;
 class QDeviceParametersWidget ;
 class QGlobalParametersWidget ;
 class QSecureScreen           ;
@@ -54,11 +52,9 @@ private:
 
     //visual placing objects
     Ui::MainWindow            *ui                            ;
-    QRamDiskManager           *ramDiskManager       = nullptr;
-    QSecureScreen             *secureScreen         = nullptr;
+    QSSLCommandClient         *m_sslClient          = nullptr;
     QVBoxLayout               *mainLayout           = nullptr;
     //this class is in charge to intercept crio udp debug datagrams
-    QTCPDebugClient           *m_crioDebugger       = nullptr;
     QTabWidget                *tabWidget            = nullptr;
     //this class is in charge to extract modules information from ini files
     QCrioModulesDataExtractor *moduleExtractor      = nullptr;
@@ -126,11 +122,13 @@ private slots:
 
     //this slots is triggered when sshCommand get the response to a "getModuleList" query though this command in ssh. bat
     //plink -ssh %USER%@%HOST% -P %PORT% -pw %PASS% "cd /home/dataDrill; ls | grep \"^NI.*\.ini$\""
-    void  onModuleListRetrived     (const QString &output      , const QString &lastCommand);
-
+    //void  onModuleListRetrived     (const QString &output      , const QString &lastCommand);
+    void  onNewModuleListRetrived  (const QString &iniList);
     //this slot is triggered when sshCommand get the response to a "downloadModule" query though this command in ssh. bat
     //pscp -P %PORT% -pw %PASS% %USER%@%HOST%:%PARAMETER1% %PARAMETER2%
     void  onModuleIniFileDownloaded(const QString &output      , const QString &lastCommand);
+    //void  onNewModuleIniFileDownloaded(const QString &output);
+
 
     //this slot is triggered when sshCommand get the response to a "downloadModbusSetup" query though this command in ssh. bat
     //pscp -P %PORT% -pw %PASS% %USER%@%HOST%:%PARAMETER1% %PARAMETER2%

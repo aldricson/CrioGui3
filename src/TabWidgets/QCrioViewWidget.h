@@ -17,6 +17,7 @@
 #include "../BasicWidgets/QBetterSwitchButton.h"
 #include "../BasicWidgets/QIpAddressEditor.h"
 #include "../BasicWidgets/QMultiLineTextVisualizer.h"
+#include "../BasicWidgets/QClientsVizu.h"
 #include "../NetWorking/QSSHCommand.h"
 #include "../TabWidgetFundations/Modules/QModulesIniListView.h"
 #include "../TabWidgetFundations/CrioDirectAccessTestWidgets/QReadCurrentTestWidget.h"
@@ -48,7 +49,7 @@ class QCrioViewWidget : public QWidget
 
     Q_PROPERTY(QLabel *moduleListLabel READ moduleListLabel WRITE setModuleListLabel NOTIFY moduleListLabelChanged)
     Q_PROPERTY(QStringListModel *moduleListModel READ moduleListModel WRITE setModuleListModel NOTIFY moduleListModelChanged)
-    Q_PROPERTY(QMultiLineTextVisualizer *crioUDPDebugOutput READ crioUDPDebugOutput WRITE setCrioUDPDebugOutput NOTIFY crioUDPDebugOutputChanged)
+    Q_PROPERTY(QClientsVizu *crioUDPDebugOutput READ crioUDPDebugOutput WRITE setCrioUDPDebugOutput NOTIFY crioUDPDebugOutputChanged)
     Q_PROPERTY(QString iniPath READ iniPath WRITE setIniPath NOTIFY iniPathChanged)
 
 public:
@@ -106,8 +107,8 @@ public:
     QStringListModel *moduleListModel() const;
     void setModuleListModel(QStringListModel *newModuleListModel);
 
-    QMultiLineTextVisualizer *crioUDPDebugOutput() const;
-    void setCrioUDPDebugOutput(QMultiLineTextVisualizer *newCrioUDPDebugOutput);
+    QClientsVizu *crioUDPDebugOutput() const;
+    void setCrioUDPDebugOutput(QClientsVizu *newCrioUDPDebugOutput);
 
     const QString &iniPath() const;
     void setIniPath(const QString &newIniPath);
@@ -144,12 +145,11 @@ private:
     QLabel                   *m_serverStateLabel            = nullptr;
     QBetterSwitchButton      *m_startStopServerSwitchButton = nullptr;
     QMultiLineTextVisualizer *m_terminalOutput              = nullptr;
-    QMultiLineTextVisualizer *m_crioUDPDebugOutput          = nullptr;
+    QClientsVizu             *m_crioUDPDebugOutput          = nullptr;
     QReadCurrentTestWidget   *m_currentTestWidget           = nullptr;
     QReadVoltageTestWidget   *m_voltageTestWidget           = nullptr;
     QStringListModel         *m_moduleListModel             = nullptr;
     QLabel                   *m_moduleListLabel             = nullptr;
-    //QListView                *m_modulesListView             = nullptr;
     QModulesIniListView      *m_modulesListView             = nullptr;
     QProgressBar             *m_modulesLoadingProgressBar   = nullptr;
     QString                   m_iniPath                     = "";
@@ -182,7 +182,7 @@ signals:
 
     void iniPathChanged();
 
-private slots:
+private Q_SLOTS:
     void handleConnection();
     void onServerChangeState();
 

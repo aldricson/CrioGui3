@@ -491,6 +491,12 @@
 			null
 		],
 		[
+			"C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/BasicWidgets/QClientsVizu.h",
+			"MU",
+			"OPYWACWCWB/moc_QClientsVizu.cpp",
+			null
+		],
+		[
 			"C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/BasicWidgets/QColorButton.h",
 			"MU",
 			"OPYWACWCWB/moc_QColorButton.cpp",
@@ -683,15 +689,15 @@
 			null
 		],
 		[
-			"C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/NetWorking/QSSLDebugClient.h",
+			"C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/NetWorking/QSSLCurrentPoller.h",
 			"MU",
-			"DZMYHVTPIZ/moc_QSSLDebugClient.cpp",
+			"DZMYHVTPIZ/moc_QSSLCurrentPoller.cpp",
 			null
 		],
 		[
-			"C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/NetWorking/QTCPDebugClient.h",
+			"C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/NetWorking/QSSLVoltagePoller.h",
 			"MU",
-			"DZMYHVTPIZ/moc_QTCPDebugClient.cpp",
+			"DZMYHVTPIZ/moc_QSSLVoltagePoller.cpp",
 			null
 		],
 		[
@@ -827,18 +833,6 @@
 			null
 		],
 		[
-			"C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/securityHardening/QRamDiskManager.h",
-			"MU",
-			"HCM6PIICLU/moc_QRamDiskManager.cpp",
-			null
-		],
-		[
-			"C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/securityHardening/QSecureScreen.h",
-			"MU",
-			"HCM6PIICLU/moc_QSecureScreen.cpp",
-			null
-		],
-		[
 			"C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/stringUtils.h",
 			"MU",
 			"UVLADIE3JM/moc_stringUtils.cpp",
@@ -929,6 +923,11 @@
 		],
 		[
 			"C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/BasicWidgets/QBetterSwitchButton.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/BasicWidgets/QClientsVizu.cpp",
 			"MU",
 			null
 		],
@@ -1078,12 +1077,12 @@
 			null
 		],
 		[
-			"C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/NetWorking/QSSLDebugClient.cpp",
+			"C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/NetWorking/QSSLCurrentPoller.cpp",
 			"MU",
 			null
 		],
 		[
-			"C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/NetWorking/QTCPDebugClient.cpp",
+			"C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/NetWorking/QSSLVoltagePoller.cpp",
 			"MU",
 			null
 		],
@@ -1194,16 +1193,6 @@
 		],
 		[
 			"C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/TabWidgets/QModbusSetupViewer.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/securityHardening/QRamDiskManager.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/securityHardening/QSecureScreen.cpp",
 			"MU",
 			null
 		]
