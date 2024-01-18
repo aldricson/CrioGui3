@@ -28,7 +28,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 namespace {
 struct qt_meta_stringdata_QSSLCommandClient_t {
-    uint offsetsAndSizes[38];
+    uint offsetsAndSizes[36];
     char stringdata0[18];
     char stringdata1[20];
     char stringdata2[1];
@@ -47,7 +47,6 @@ struct qt_meta_stringdata_QSSLCommandClient_t {
     char stringdata15[19];
     char stringdata16[23];
     char stringdata17[15];
-    char stringdata18[7];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_QSSLCommandClient_t::offsetsAndSizes) + ofs), len 
@@ -70,8 +69,7 @@ Q_CONSTINIT static const qt_meta_stringdata_QSSLCommandClient_t qt_meta_stringda
         QT_MOC_LITERAL(263, 16),  // "clientListSignal"
         QT_MOC_LITERAL(280, 18),  // "listInifilesSignal"
         QT_MOC_LITERAL(299, 22),  // "moduleDownloadedSignal"
-        QT_MOC_LITERAL(322, 14),  // "onDataReceived"
-        QT_MOC_LITERAL(337, 6)   // "onIdle"
+        QT_MOC_LITERAL(322, 14)   // "onDataReceived"
     },
     "QSSLCommandClient",
     "currentReadedSignal",
@@ -90,8 +88,7 @@ Q_CONSTINIT static const qt_meta_stringdata_QSSLCommandClient_t qt_meta_stringda
     "clientListSignal",
     "listInifilesSignal",
     "moduleDownloadedSignal",
-    "onDataReceived",
-    "onIdle"
+    "onDataReceived"
 };
 #undef QT_MOC_LITERAL
 } // unnamed namespace
@@ -102,7 +99,7 @@ Q_CONSTINIT static const uint qt_meta_data_QSSLCommandClient[] = {
       10,       // revision
        0,       // classname
        0,    0, // classinfo
-      16,   14, // methods
+      15,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -110,24 +107,23 @@ Q_CONSTINIT static const uint qt_meta_data_QSSLCommandClient[] = {
       14,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    1,  110,    2, 0x06,    1 /* Public */,
-       4,    1,  113,    2, 0x06,    3 /* Public */,
-       5,    1,  116,    2, 0x06,    5 /* Public */,
-       6,    1,  119,    2, 0x06,    7 /* Public */,
-       7,    1,  122,    2, 0x06,    9 /* Public */,
-       8,    1,  125,    2, 0x06,   11 /* Public */,
-       9,    1,  128,    2, 0x06,   13 /* Public */,
-      10,    1,  131,    2, 0x06,   15 /* Public */,
-      11,    1,  134,    2, 0x06,   17 /* Public */,
-      12,    1,  137,    2, 0x06,   19 /* Public */,
-      13,    1,  140,    2, 0x06,   21 /* Public */,
-      14,    1,  143,    2, 0x06,   23 /* Public */,
-      15,    1,  146,    2, 0x06,   25 /* Public */,
-      16,    1,  149,    2, 0x06,   27 /* Public */,
+       1,    1,  104,    2, 0x06,    1 /* Public */,
+       4,    1,  107,    2, 0x06,    3 /* Public */,
+       5,    1,  110,    2, 0x06,    5 /* Public */,
+       6,    1,  113,    2, 0x06,    7 /* Public */,
+       7,    1,  116,    2, 0x06,    9 /* Public */,
+       8,    1,  119,    2, 0x06,   11 /* Public */,
+       9,    1,  122,    2, 0x06,   13 /* Public */,
+      10,    1,  125,    2, 0x06,   15 /* Public */,
+      11,    1,  128,    2, 0x06,   17 /* Public */,
+      12,    1,  131,    2, 0x06,   19 /* Public */,
+      13,    1,  134,    2, 0x06,   21 /* Public */,
+      14,    1,  137,    2, 0x06,   23 /* Public */,
+      15,    1,  140,    2, 0x06,   25 /* Public */,
+      16,    1,  143,    2, 0x06,   27 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-      17,    0,  152,    2, 0x09,   29 /* Protected */,
-      18,    0,  153,    2, 0x09,   30 /* Protected */,
+      17,    0,  146,    2, 0x09,   29 /* Protected */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::QString,    3,
@@ -146,7 +142,6 @@ Q_CONSTINIT static const uint qt_meta_data_QSSLCommandClient[] = {
     QMetaType::Void, QMetaType::QString,    3,
 
  // slots: parameters
-    QMetaType::Void,
     QMetaType::Void,
 
        0        // eod
@@ -204,8 +199,6 @@ Q_CONSTINIT const QMetaObject QSSLCommandClient::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
         // method 'onDataReceived'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'onIdle'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -232,7 +225,6 @@ void QSSLCommandClient::qt_static_metacall(QObject *_o, QMetaObject::Call _c, in
         case 12: _t->listInifilesSignal((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
         case 13: _t->moduleDownloadedSignal((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
         case 14: _t->onDataReceived(); break;
-        case 15: _t->onIdle(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -357,13 +349,13 @@ int QSSLCommandClient::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 16)
+        if (_id < 15)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 16;
+        _id -= 15;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 16)
+        if (_id < 15)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 16;
+        _id -= 15;
     }
     return _id;
 }

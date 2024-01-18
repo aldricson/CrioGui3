@@ -912,6 +912,8 @@ crioGui3_autogen/timestamp: \
   ../src/NetWorking/QSSLCommandClient.h \
   ../src/NetWorking/QSSLCurrentPoller.cpp \
   ../src/NetWorking/QSSLCurrentPoller.h \
+  ../src/NetWorking/QSSLDebugClient.cpp \
+  ../src/NetWorking/QSSLDebugClient.h \
   ../src/NetWorking/QSSLVoltagePoller.cpp \
   ../src/NetWorking/QSSLVoltagePoller.h \
   ../src/NetWorking/certificateinfo.cpp \

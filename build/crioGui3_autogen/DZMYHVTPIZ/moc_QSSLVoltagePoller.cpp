@@ -28,7 +28,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 namespace {
 struct qt_meta_stringdata_QSSLVoltagePoller_t {
-    uint offsetsAndSizes[16];
+    uint offsetsAndSizes[14];
     char stringdata0[18];
     char stringdata1[20];
     char stringdata2[1];
@@ -36,7 +36,6 @@ struct qt_meta_stringdata_QSSLVoltagePoller_t {
     char stringdata4[25];
     char stringdata5[12];
     char stringdata6[15];
-    char stringdata7[7];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_QSSLVoltagePoller_t::offsetsAndSizes) + ofs), len 
@@ -48,8 +47,7 @@ Q_CONSTINIT static const qt_meta_stringdata_QSSLVoltagePoller_t qt_meta_stringda
         QT_MOC_LITERAL(39, 8),  // "response"
         QT_MOC_LITERAL(48, 24),  // "socketNotConnectedSignal"
         QT_MOC_LITERAL(73, 11),  // "errorSignal"
-        QT_MOC_LITERAL(85, 14),  // "onDataReceived"
-        QT_MOC_LITERAL(100, 6)   // "onIdle"
+        QT_MOC_LITERAL(85, 14)   // "onDataReceived"
     },
     "QSSLVoltagePoller",
     "voltageReadedSignal",
@@ -57,8 +55,7 @@ Q_CONSTINIT static const qt_meta_stringdata_QSSLVoltagePoller_t qt_meta_stringda
     "response",
     "socketNotConnectedSignal",
     "errorSignal",
-    "onDataReceived",
-    "onIdle"
+    "onDataReceived"
 };
 #undef QT_MOC_LITERAL
 } // unnamed namespace
@@ -69,7 +66,7 @@ Q_CONSTINIT static const uint qt_meta_data_QSSLVoltagePoller[] = {
       10,       // revision
        0,       // classname
        0,    0, // classinfo
-       5,   14, // methods
+       4,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -77,13 +74,12 @@ Q_CONSTINIT static const uint qt_meta_data_QSSLVoltagePoller[] = {
        3,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    1,   44,    2, 0x06,    1 /* Public */,
-       4,    1,   47,    2, 0x06,    3 /* Public */,
-       5,    1,   50,    2, 0x06,    5 /* Public */,
+       1,    1,   38,    2, 0x06,    1 /* Public */,
+       4,    1,   41,    2, 0x06,    3 /* Public */,
+       5,    1,   44,    2, 0x06,    5 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       6,    0,   53,    2, 0x09,    7 /* Protected */,
-       7,    0,   54,    2, 0x09,    8 /* Protected */,
+       6,    0,   47,    2, 0x09,    7 /* Protected */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::QString,    3,
@@ -91,7 +87,6 @@ Q_CONSTINIT static const uint qt_meta_data_QSSLVoltagePoller[] = {
     QMetaType::Void, QMetaType::QString,    3,
 
  // slots: parameters
-    QMetaType::Void,
     QMetaType::Void,
 
        0        // eod
@@ -116,8 +111,6 @@ Q_CONSTINIT const QMetaObject QSSLVoltagePoller::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
         // method 'onDataReceived'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'onIdle'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -133,7 +126,6 @@ void QSSLVoltagePoller::qt_static_metacall(QObject *_o, QMetaObject::Call _c, in
         case 1: _t->socketNotConnectedSignal((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
         case 2: _t->errorSignal((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
         case 3: _t->onDataReceived(); break;
-        case 4: _t->onIdle(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -181,13 +173,13 @@ int QSSLVoltagePoller::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 5)
+        if (_id < 4)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 5;
+        _id -= 4;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 5)
+        if (_id < 4)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 5;
+        _id -= 4;
     }
     return _id;
 }

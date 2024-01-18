@@ -27,6 +27,7 @@
 #include "DZMYHVTPIZ/moc_QSSLBaseClient.cpp"
 #include "DZMYHVTPIZ/moc_QSSLCommandClient.cpp"
 #include "DZMYHVTPIZ/moc_QSSLCurrentPoller.cpp"
+#include "DZMYHVTPIZ/moc_QSSLDebugClient.cpp"
 #include "DZMYHVTPIZ/moc_QSSLVoltagePoller.cpp"
 #include "DZMYHVTPIZ/moc_certificateinfo.cpp"
 #include "UVLADIE3JM/moc_QSignalAggregator.cpp"

@@ -695,6 +695,12 @@
 			null
 		],
 		[
+			"C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/NetWorking/QSSLDebugClient.h",
+			"MU",
+			"DZMYHVTPIZ/moc_QSSLDebugClient.cpp",
+			null
+		],
+		[
 			"C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/NetWorking/QSSLVoltagePoller.h",
 			"MU",
 			"DZMYHVTPIZ/moc_QSSLVoltagePoller.cpp",
@@ -1078,6 +1084,11 @@
 		],
 		[
 			"C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/NetWorking/QSSLCurrentPoller.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/NetWorking/QSSLDebugClient.cpp",
 			"MU",
 			null
 		],

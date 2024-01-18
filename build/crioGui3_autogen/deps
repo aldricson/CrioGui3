@@ -912,6 +912,8 @@ crioGui3_autogen/timestamp: \
 	C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/NetWorking/QSSLCommandClient.h \
 	C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/NetWorking/QSSLCurrentPoller.cpp \
 	C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/NetWorking/QSSLCurrentPoller.h \
+	C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/NetWorking/QSSLDebugClient.cpp \
+	C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/NetWorking/QSSLDebugClient.h \
 	C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/NetWorking/QSSLVoltagePoller.cpp \
 	C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/NetWorking/QSSLVoltagePoller.h \
 	C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/NetWorking/certificateinfo.cpp \
