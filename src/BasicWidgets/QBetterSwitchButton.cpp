@@ -12,8 +12,9 @@ QBetterSwitchButton::QBetterSwitchButton(QString aFalseText ,
     m_oldState = initialState;
     trueContrastedColor  = getContrastColor(aTrueColor);
     falseContrastedColor = getContrastColor(aFalseColor);
-    trueQss  = QString ("color: %1").arg(trueContrastedColor.name()) ;
-    falseQss = QString ("color: %1").arg(falseContrastedColor.name());
+    trueQss = QString("color: %1; background-color: transparent;").arg(trueContrastedColor.name());
+    falseQss = QString("color: %1; background-color: transparent;").arg(falseContrastedColor.name());
+
 
     QFont font = falseLabel.font();
     font.setPointSize(10);
@@ -26,9 +27,13 @@ QBetterSwitchButton::QBetterSwitchButton(QString aFalseText ,
     falseLabel     . setText       (falseText)      ;
     falseLabel     . setParent     (this)           ;
     falseLabel     . setStyleSheet (falseQss)       ;
+
     trueLabel      . setText       (trueText)       ;
     trueLabel      . setParent     (this)           ;
     trueLabel      . setStyleSheet (trueQss)        ;
+
+
+
     falseColor     = aFalseColor                    ;
     trueColor      = aTrueColor                     ;
     cursorColor    = aCursorColor                   ;
@@ -347,6 +352,19 @@ void QBetterSwitchButton::setCursorColor(const QColor &newCursorColor)
         return;
     cursorColor = newCursorColor;
     emit cursorColorChanged();
+}
+
+int QBetterSwitchButton::getIndex() const
+{
+    return index;
+}
+
+void QBetterSwitchButton::setIndex(int newIndex)
+{
+    if (index == newIndex)
+        return;
+    index = newIndex;
+    emit indexChanged();
 }
 
 

@@ -16,6 +16,14 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
 
+    test = new QThermometer();
+    test->setMinTemp(0);
+    test->setMaxTemp(100);
+    test->setCurrentValue(20);
+    test->setFixedWidth(60);
+    test->setFixedHeight(140);
+    test->show();
+
     m_sslClient = new QSSLCommandClient("fileMangerClient",this);
     connect (m_sslClient, &QSSLCommandClient::listInifilesSignal, this , &MainWindow::onNewModuleListRetrived, Qt::QueuedConnection);
     //connect (m_sslClient, &QSSLCommandClient::moduleDownloadedSignal, this, &MainWindow::onNewModuleIniFileDownloaded, Qt::QueuedConnection);
@@ -163,8 +171,7 @@ QWidget *MainWindow::createCrioViewTab()
 
 QWidget *MainWindow::createModbusViewTab()
 {
-    modbusSetupViewer = new QModbusSetupViewer(this);
-    modbusSetupViewer->setFileName(iniModbusSetupPath+"modbus.ini");
+    modbusSetupViewer = new QModbusSetupViewer(iniModbusSetupPath+"modbus.ini",this);
     connect (modbusSetupViewer,&QModbusSetupViewer::blockDirectReadingSignal, this, &MainWindow::onBlockDirectRead, Qt::QueuedConnection);
     QWidget *tab = new QWidget();
     QGridLayout *layout = new QGridLayout(tab);

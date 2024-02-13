@@ -4,14 +4,13 @@
 #include "../BasicWidgets/QBetterSwitchButton.h"
 #include "../BasicWidgets/QMultiLineTextVisualizer.h"
 #include "../NetWorking/QModbusCrioClient.h"
-
-
 #include "../TabWidgetFundations/ModbusWidgets/QModbusAnalogViewer.h"
+#include "../stringUtils.h"
 
-
-QModbusSetupViewer::QModbusSetupViewer(QWidget *parent)
+QModbusSetupViewer::QModbusSetupViewer(const QString &settingFileName,QWidget *parent)
     : QWidget(parent)
 {
+    setFileName(settingFileName);
     //the class in charge of retriving datas from the crio modbus
     m_modbusClient   = new QModbusCrioClient(this);
     //connect(m_modbusClient, &QModbusCrioClient::analogsDataReady, this, &QModbusSetupViewer::OnAnalogsDataReady, Qt::QueuedConnection);
@@ -25,72 +24,62 @@ QModbusSetupViewer::QModbusSetupViewer(QWidget *parent)
     m_debugOutput  = new QMultiLineTextVisualizer(this);
     m_debugOutput->setProperty("needBorder",true);
     // Create GroupBoxes for different sections
-    m_containerGroupBox          = new QGroupBox("Modbus Setup",this);
-    m_containerGroupBox->setProperty("bigContainer", true);
-    createSectionGroupBoxes(m_containerGroupBox);
-    // Create QLineEdit widgets for the m_modbusCapacitiesGroupBox
-    coilsLineEdit            = new QLineEdit(m_modbusCapacitiesGroupBox);
-    discreteInputsLineEdit   = new QLineEdit(m_modbusCapacitiesGroupBox);
-    holdingRegistersLineEdit = new QLineEdit(m_modbusCapacitiesGroupBox);
-    inputRegistersLineEdit   = new QLineEdit(m_modbusCapacitiesGroupBox);
+    // 1) this groupbox will "group" all modbus base parameters
+    m_modbusSetupGroupBox  = new QGroupBox    ( "Modbus Setup", this );
+    m_modbusSetupGroupBox -> setProperty      ( "bigContainer", true );
+    m_modbusSetupGroupBox -> setMinimumWidth  ( 240 )                 ;
+    m_modbusSetupGroupBox -> setMinimumHeight ( 700 )                 ;
 
-    // Create QLineEdit widgets for the m_networkGroupBox
-    listeningPortLineEdit    = new QLineEdit       (m_networkGroupBox);
-    listeningInterfaceIpEdit = new QIpAddressEditor(m_networkGroupBox);
+    m_modbusSetupGroupBoxLayout = new QVBoxLayout(m_modbusSetupGroupBox);
 
-    // Widgets for the m_compatibilityLayerGroupBox
-    compatibilityLayerSwitch = new QBetterSwitchButton("Off", "On", QColor(0xEE4B2B), QColor(0x6495ED), Qt::green, true, m_compatibilityLayerGroupBox);
-    nbAnalogsInLineEdit      = new QLineEdit(m_compatibilityLayerGroupBox);
-    nbAnalogsOutLineEdit     = new QLineEdit(m_compatibilityLayerGroupBox);
-    nbCountersLineEdit       = new QLineEdit(m_compatibilityLayerGroupBox);
-    // Create buttons for actions
-    createLoadSaveUploadButtons(m_containerGroupBox);
-    // Create a form layout for the m_modbusCapacitiesGroupBox
-    QFormLayout *modbusCapacitiesLayout = new QFormLayout(m_modbusCapacitiesGroupBox);
-    modbusCapacitiesLayout->addRow("Coils Max:"            , coilsLineEdit);
-    modbusCapacitiesLayout->addRow("Discrete Inputs Max:"  , discreteInputsLineEdit);
-    modbusCapacitiesLayout->addRow("Holding Registers Max:", holdingRegistersLineEdit);
-    modbusCapacitiesLayout->addRow("Input Registers Max:"  , inputRegistersLineEdit);
-    m_modbusCapacitiesGroupBox->setLayout(modbusCapacitiesLayout);
 
-    // Create a form layout for the m_networkGroupBox
-    QFormLayout *networkLayout = new QFormLayout(m_networkGroupBox);
-    networkLayout->addRow("Listening Port:"     , listeningPortLineEdit);
-    networkLayout->addRow("Listening Interface:", listeningInterfaceIpEdit);
-    m_networkGroupBox->setLayout(networkLayout);
 
-    // Create a form layout for the m_compatibilityLayerGroupBox
-    QFormLayout *compatibilityLayout = new QFormLayout(m_compatibilityLayerGroupBox);
-    compatibilityLayout->addRow("Compatibility Layer:", compatibilityLayerSwitch);
-    compatibilityLayout->addRow("Nb Analogs In:"      , nbAnalogsInLineEdit);
-    compatibilityLayout->addRow("Nb Analogs Out:"     , nbAnalogsOutLineEdit);
-    compatibilityLayout->addRow("Nb Counters:"        , nbCountersLineEdit);
-    m_compatibilityLayerGroupBox->setLayout(compatibilityLayout);
+//    // Create QLineEdit widgets for the m_networkGroupBox
+//    listeningPortLineEdit    = new QLineEdit       (m_networkGroupBox);
+//    listeningInterfaceIpEdit = new QIpAddressEditor(m_networkGroupBox);
 
-    // Create a layout for buttons
-    QVBoxLayout *buttonLayout = new QVBoxLayout;
-    buttonLayout->addWidget(reloadButton);
-    buttonLayout->addWidget(saveButton);
-    buttonLayout->addWidget(uploadButton);
+    // New refactoring
+    // 1) to represent all the capcities of the crio in term of max nb registers
+    m_crioCapacitiesWidget     = new QModbusCapacitiesWidget      (m_settings,this);
+    // 2) to represent all the registers used by exlog in order to make us compatible
+    m_exlogCompatibilityWidget = new QExlogCompatibilityWidget    (m_settings,this);
+    // 3) file operations (load/save/upload)
+    m_fileOperationWidget      = new QModbusLoadSaveUploadWidget  (this);
+    // 4) alarms switching widget
+    m_alarmWidget               = new QAlarmViewerWidget(m_settings,this);
 
-    // Create a main layout to arrange the group boxes and button layout
-    QVBoxLayout *mainLayout = new QVBoxLayout;
-    mainLayout->addWidget(m_modbusCapacitiesGroupBox);
-    mainLayout->addWidget(m_networkGroupBox);
-    mainLayout->addWidget(m_compatibilityLayerGroupBox);
-    mainLayout->addLayout(buttonLayout);
 
-    // Set the main layout to m_containerGroupBox
-    m_containerGroupBox->setLayout(mainLayout);
+
+    // Connect buttons for actions related to file operation
+    connectLoadSaveUploadButtons();
+
+    m_finalLayout = new QGridLayout(this);
+
+//    // Create a form layout for the m_networkGroupBox
+//    QFormLayout *networkLayout = new QFormLayout(m_networkGroupBox);
+//    networkLayout->addRow("Listening Port:"     , listeningPortLineEdit);
+//    networkLayout->addRow("Listening Interface:", listeningInterfaceIpEdit);
+//    m_networkGroupBox->setLayout(networkLayout);
+//
+
 
     m_analogsViewer = new QModbusAnalogViewer(this);
+    m_analogsViewer->setMinimumWidth(800);
 
     startStopModbusSwitch     = new QBetterSwitchButton("stop ", "start", QColor(0xEE4B2B), QColor(0x6495ED), Qt::green, false, this);
     simulateAcquisitionSwitch = new QBetterSwitchButton("simulate", " mapped ", QColor(0xEE4B2B), QColor(0x6495ED), Qt::green, false, this);
 
-    connect(compatibilityLayerSwitch  , &QBetterSwitchButton::stateChanged , this, &QModbusSetupViewer::onExlogCompatibilityChanged, Qt::QueuedConnection);
+    connect (m_exlogCompatibilityWidget,
+             &QExlogCompatibilityWidget::compatibilityChangedSignal,
+             this,
+             &QModbusSetupViewer::onExlogCompatibilityChanged,
+             Qt::QueuedConnection);
+
     connect(startStopModbusSwitch     , &QBetterSwitchButton::stateChanged , this, &QModbusSetupViewer::onStartStopModbusChanged   , Qt::QueuedConnection);
     connect(simulateAcquisitionSwitch , &QBetterSwitchButton::stateChanged , this, &QModbusSetupViewer::onModbusSimulationOrAcquisitionChanged, Qt::QueuedConnection);
+
+
+
     setUpLayout();
 
 }
@@ -100,44 +89,37 @@ QModbusSetupViewer::QModbusSetupViewer(QWidget *parent)
 void QModbusSetupViewer::loadFromFile()
 {
     blockAllSignals(true);
-
     // Correct group and key names are used based on the provided content structure
-    settings->beginGroup("coils");
-    coilsLineEdit->setText(settings->value("max").toString());
-    settings->endGroup();
+    // see the file modbus.ini
+    m_crioCapacitiesWidget      -> onLoadFromFile()          ;
 
-    settings->beginGroup("discreteinputs");
-    discreteInputsLineEdit->setText(settings->value("max").toString());
-    settings->endGroup();
-
-    settings->beginGroup("holdingregisters");
-    holdingRegistersLineEdit->setText(settings->value("max").toString());
-    settings->endGroup();
-
-    settings->beginGroup("inputregisters");
-    inputRegistersLineEdit->setText(settings->value("max").toString());
-    settings->endGroup();
-
-    settings->beginGroup("network");
-    listeningPortLineEdit->setText(settings->value("listeningport").toString());
-    listeningInterfaceIpEdit->setIp(settings->value("listeninginterface").toString());
-    settings->endGroup();
-
-    settings->beginGroup("exlog");
-    QString boolStr = settings->value("compatibilitylayer").toString();
-    bool compatible = textToBool(boolStr);
-    compatibilityLayerSwitch->blockSignals(true);
-    compatibilityLayerSwitch->setState(compatible);
-    compatibilityLayerSwitch->blockSignals(false);
+    bool compatible                                          ;
+    m_exlogCompatibilityWidget  -> onLoadFromFile(compatible);
+    //in exlog compatibility mode registers begins from 1 , other wise from 0
     compatible ? m_exlogOffset=1 : m_exlogOffset=0;
-    m_analogsViewer->resetOffset(m_exlogOffset);
-    settings->endGroup();
+    //So the viewer must reflect it
+    m_analogsViewer -> resetOffset(m_exlogOffset);
+    m_alarmWidget   -> onLoadFromFile();
 
-    settings->beginGroup("exlogmapping");
-    nbAnalogsInLineEdit->setText(settings->value("nbanalogsin").toString());
-    nbAnalogsOutLineEdit->setText(settings->value("nbanalogsout").toString());
-    nbCountersLineEdit->setText(settings->value("nbcounters").toString());
-    settings->endGroup();
+
+
+    //m_settings->beginGroup("network");
+    //listeningPortLineEdit->setText(m_settings->value("listeningport").toString());
+    //listeningInterfaceIpEdit->setIp(m_settings->value("listeninginterface").toString());
+    //m_settings->endGroup();
+
+    //m_settings->beginGroup("exlog");
+    //QString boolStr = m_settings->value("compatibilitylayer").toString();
+    //bool compatible = textToBool(boolStr);
+
+    //m_exlogCompatibilityWidget->onRunTimeChangeState(compatible);
+
+
+    //compatible ? m_exlogOffset=1 : m_exlogOffset=0;
+    //m_analogsViewer->resetOffset(m_exlogOffset);
+    //m_settings->endGroup();
+
+
 
     blockAllSignals(false);
 }
@@ -145,41 +127,47 @@ void QModbusSetupViewer::loadFromFile()
 void QModbusSetupViewer::saveToFile()
 {
     blockAllSignals(true);
-
+    m_crioCapacitiesWidget -> onSaveTofile();
     // Correct group and key names are used based on the provided content structure
-    settings->beginGroup("coils");
-    settings->setValue("max", coilsLineEdit->text());
-    settings->endGroup();
+//    m_settings->beginGroup("coils");
+//    m_settings->setValue("max", coilsLineEdit->text());
+//    m_settings->endGroup();
+//
+//    m_settings->beginGroup("discreteinputs");
+//    m_settings->setValue("max", discreteInputsLineEdit->text());
+//    m_settings->endGroup();
+//
+//    m_settings->beginGroup("holdingregisters");
+//    m_settings->setValue("max", holdingRegistersLineEdit->text());
+//    m_settings->endGroup();
+//
+//    m_settings->beginGroup("inputregisters");
+//    m_settings->setValue("max", inputRegistersLineEdit->text());
+//    m_settings->endGroup();
 
-    settings->beginGroup("discreteinputs");
-    settings->setValue("max", discreteInputsLineEdit->text());
-    settings->endGroup();
 
-    settings->beginGroup("holdingregisters");
-    settings->setValue("max", holdingRegistersLineEdit->text());
-    settings->endGroup();
 
-    settings->beginGroup("inputregisters");
-    settings->setValue("max", inputRegistersLineEdit->text());
-    settings->endGroup();
 
-    settings->beginGroup("network");
-    settings->setValue("listeningport", listeningPortLineEdit->text());
-    settings->setValue("listeninginterface", listeningInterfaceIpEdit->ipAddress());
-    settings->endGroup();
 
-    settings->beginGroup("exlog");
-    QString compatible = boolToText(compatibilityLayerSwitch->getState());
-    settings->setValue("compatibilitylayer", compatible);
-    settings->endGroup();
-
-    settings->beginGroup("exlogmapping");
-    settings->setValue("nbanalogsin", nbAnalogsInLineEdit->text());
-    settings->setValue("nbanalogsout", nbAnalogsOutLineEdit->text());
-    settings->setValue("nbcounters", nbCountersLineEdit->text());
-    settings->endGroup();
-
-    blockAllSignals(false);
+//    m_settings->beginGroup("network");
+//    m_settings->setValue("listeningport", listeningPortLineEdit->text());
+//    m_settings->setValue("listeninginterface", listeningInterfaceIpEdit->ipAddress());
+//    m_settings->endGroup();
+//
+//    m_settings->beginGroup("exlog");
+//    QString compatible = boolToText(m_exlogCompatibilityWidget->getCompatibilityLayerSwitch()->getState());
+//    m_settings->setValue("compatibilitylayer", compatible);
+//    m_settings->endGroup();
+//
+//    m_settings->beginGroup("exlogmapping");
+//    m_settings->setValue("nbanalogsin" , m_exlogCompatibilityWidget->getNbAnalogsInLineEdit  () -> text());
+//    m_settings->setValue("nbanalogsout", m_exlogCompatibilityWidget->getNbAnalogsOutLineEdit () -> text());
+//    m_settings->setValue("nbcounters"  , m_exlogCompatibilityWidget->getNbCountersLineEdit   () -> text());
+//    m_settings->setValue("nbalarms"    , m_exlogCompatibilityWidget->getNbAlarmsLineEdit     () -> text());
+//
+//    m_settings->endGroup();
+//
+//    blockAllSignals(false);
 }
 
 
@@ -188,14 +176,15 @@ void QModbusSetupViewer::uploadToServer()
     // Placeholder for uploading settings to the server
 }
 
-void QModbusSetupViewer::onExlogCompatibilityChanged()
+void QModbusSetupViewer::onExlogCompatibilityChanged(bool state)
 {
-    compatibilityLayerSwitch->getState() ? m_exlogOffset=1 : m_exlogOffset=0;
+    state ? m_exlogOffset=1 : m_exlogOffset=0;
     m_analogsViewer->resetOffset(m_exlogOffset);
 }
 
 void QModbusSetupViewer::onModbusSimulationOrAcquisitionChanged()
 {
+    //this code is probably dead code now, to check before cleaning it
     m_isSimul = !simulateAcquisitionSwitch->getState();
     if (!m_isSimul)
     {
@@ -264,8 +253,8 @@ void QModbusSetupViewer::onSimulationStarted(const QString &response)
 {
     if (response.contains("ACK"))
     {
-        m_nbAnalogics = nbAnalogsInLineEdit->text().toInt();
-        compatibilityLayerSwitch->getState() ? m_exlogOffset = 1 : m_exlogOffset = 0;
+        m_nbAnalogics = m_exlogCompatibilityWidget->getNbAnalogsInLineEdit()->text().toInt();
+        m_exlogCompatibilityWidget->getCompatibilityLayerSwitch()->getState() ? m_exlogOffset = 1 : m_exlogOffset = 0;
         m_comControl->addLastOutput("Modbus server simulation on");
         m_modbusTimer->start();
         m_modbusReading = true;
@@ -274,7 +263,7 @@ void QModbusSetupViewer::onSimulationStarted(const QString &response)
     {
         m_modbusReading = false;
         m_modbusTimer->stop();
-        m_comControl->addLastError("Somthing gone wrong when trying to start simulation:\n"+response);
+        m_comControl->addLastError("Something gone wrong when trying to start simulation:\n"+response);
     }
 }
 
@@ -303,8 +292,8 @@ void QModbusSetupViewer::onAcquisitionStarted(const QString &response)
     if (response.contains("ACK"))
     {
         Q_EMIT blockDirectReadingSignal(true);
-        m_nbAnalogics = nbAnalogsInLineEdit->text().toInt();
-        compatibilityLayerSwitch->getState() ? m_exlogOffset = 1 : m_exlogOffset = 0;
+        m_nbAnalogics = m_exlogCompatibilityWidget->getNbAnalogsInLineEdit()->text().toInt();
+        m_exlogCompatibilityWidget->getCompatibilityLayerSwitch()->getState() ? m_exlogOffset = 1 : m_exlogOffset = 0;
         m_comControl->addLastOutput("Modbus server acquisition on");
         m_modbusTimer->start();
         qInfo()<<"timer is started";
@@ -449,21 +438,10 @@ void QModbusSetupViewer::setHost(const QString &newHost)
 }
 
 void QModbusSetupViewer::blockAllSignals(const bool &blocked)
-{
-    m_containerGroupBox        -> blockSignals(blocked);
-    coilsLineEdit              -> blockSignals(blocked);
-    discreteInputsLineEdit     -> blockSignals(blocked);
-    holdingRegistersLineEdit   -> blockSignals(blocked);
-    inputRegistersLineEdit     -> blockSignals(blocked);
-    listeningPortLineEdit      -> blockSignals(blocked);
-    listeningInterfaceIpEdit   -> blockSignals(blocked);
-    compatibilityLayerSwitch   -> blockSignals(blocked);
-    nbAnalogsInLineEdit        -> blockSignals(blocked);
-    nbAnalogsOutLineEdit       -> blockSignals(blocked);
-    nbCountersLineEdit         -> blockSignals(blocked);
-    reloadButton               -> blockSignals(blocked);
-    saveButton                 -> blockSignals(blocked);
-    uploadButton               -> blockSignals(blocked);
+{    
+    m_crioCapacitiesWidget     -> onBlockAllSignal(blocked);
+    m_exlogCompatibilityWidget -> onBlockAllSignal(blocked);
+    //m_fileOperationWidget      -> onBlockAllSignal(blocked);
 }
 
 const QString &QModbusSetupViewer::fileName() const
@@ -476,29 +454,20 @@ void QModbusSetupViewer::setFileName(const QString &newFileName)
     if (m_fileName == newFileName)
         return;
     m_fileName = newFileName;
-    if (settings)
+    if (m_settings)
     {
-        delete settings;
-        settings = nullptr;
+        delete m_settings;
+        m_settings = nullptr;
     }
    // Recreate the settings object with the new file name
-   settings = new QSettings(m_fileName, QSettings::IniFormat);
+    m_settings = new QSettings(m_fileName, QSettings::IniFormat);
    emit fileNameChanged();
 }
 
 
 void QModbusSetupViewer::setAllValidators()
 {
-    // Integer validator for Modbus capacities (assuming max value of 65535 is reasonable for these settings)
-    QIntValidator *intValidator = new QIntValidator(0, 65535, this);
 
-    coilsLineEdit->setValidator(intValidator);
-    discreteInputsLineEdit   -> setValidator (intValidator) ;
-    holdingRegistersLineEdit -> setValidator (intValidator) ;
-    inputRegistersLineEdit   -> setValidator (intValidator) ;
-    nbAnalogsInLineEdit      -> setValidator (intValidator) ;
-    nbAnalogsOutLineEdit     -> setValidator (intValidator) ;
-    nbCountersLineEdit       -> setValidator (intValidator) ;
 
     // Port validator (1-65535)
     QIntValidator *portValidator = new QIntValidator(1, 65535, this);
@@ -536,49 +505,15 @@ void QModbusSetupViewer::createTCPClient()
              Qt::QueuedConnection)                     ;
 
 
-    //connect (m_tcpClient,
-    //         &QtTcpClient::simulationStartedSignal     ,
-    //         this                                      ,
-    //         &QModbusSetupViewer::onSimulationStarted  ,
-    //         Qt::QueuedConnection)                     ;
-
-    //connect (m_tcpClient                               ,
-    //         &QtTcpClient::simulationStopedSignal      ,
-    //         this                                      ,
-    //         &QModbusSetupViewer::onSimulationStoped   ,
-    //         Qt::QueuedConnection)                     ;
-
-    //connect (m_tcpClient                               ,
-    //         &QtTcpClient::acquisitionStartedSignal    ,
-    //         this                                      ,
-    //         &QModbusSetupViewer::onAcquisitionStarted ,
-    //         Qt::QueuedConnection)                     ;
-
-    //connect (m_tcpClient                               ,
-    //         &QtTcpClient::acquisitionStopedSignal    ,
-    //         this                                      ,
-    //         &QModbusSetupViewer::onAcquisitionStoped  ,
-    //         Qt::QueuedConnection)                     ;
-}
-
-void QModbusSetupViewer::createSectionGroupBoxes(QGroupBox *parentGroupBox)
-{
-    m_compatibilityLayerGroupBox = new QGroupBox("Exlog Compatibility"  , parentGroupBox);
-    m_modbusCapacitiesGroupBox   = new QGroupBox("Modbus Capacities"    , parentGroupBox); // Corrected the name to match its purpose
-    m_networkGroupBox            = new QGroupBox("Network Configuration", parentGroupBox);
 }
 
 
-void QModbusSetupViewer::createLoadSaveUploadButtons(QGroupBox *parentGroupBox)
+void QModbusSetupViewer::connectLoadSaveUploadButtons ()
 {
-    // Create buttons for actions
-    reloadButton = new QPushButton ("(Re)load", parentGroupBox);
-    saveButton   = new QPushButton ("Save"    , parentGroupBox);
-    uploadButton = new QPushButton ("Upload"  , parentGroupBox);
-    // Connect buttons to slots
-    connect(reloadButton, &QPushButton::clicked, this, &QModbusSetupViewer::loadFromFile  , Qt::QueuedConnection);
-    connect(saveButton  , &QPushButton::clicked, this, &QModbusSetupViewer::saveToFile    , Qt::QueuedConnection);
-    connect(uploadButton, &QPushButton::clicked, this, &QModbusSetupViewer::uploadToServer, Qt::QueuedConnection);
+    // Connect buttons signals of the widget to appropriate slots
+    connect (m_fileOperationWidget , &QModbusLoadSaveUploadWidget::loadSignal   , this, &QModbusSetupViewer::loadFromFile  , Qt::QueuedConnection);
+    connect (m_fileOperationWidget , &QModbusLoadSaveUploadWidget::saveSignal   , this, &QModbusSetupViewer::saveToFile    , Qt::QueuedConnection);
+    connect (m_fileOperationWidget , &QModbusLoadSaveUploadWidget::uploadSignal , this, &QModbusSetupViewer::uploadToServer, Qt::QueuedConnection);
 }
 
 void QModbusSetupViewer::createSimulTimer()
@@ -590,14 +525,21 @@ void QModbusSetupViewer::createSimulTimer()
 
 void QModbusSetupViewer::setUpLayout()
 {
-    // Create a layout for this widget and add the m_containerGroupBox to it
-    QGridLayout *thisLayout = new QGridLayout(this);
-    thisLayout->addWidget(startStopModbusSwitch ,0,0,1,1);
-    thisLayout->addWidget(startStopModbusSwitch ,0,1,1,1);
-    thisLayout->addWidget(m_containerGroupBox   ,1,0,1,1);
-    thisLayout->addWidget(m_analogsViewer       ,1,1,1,1);
-    thisLayout->addWidget(m_comControl          ,2,0,1,1);
-    thisLayout->addWidget(m_debugOutput         ,2,1,1,1);
-    setLayout(thisLayout);
+    //put all the widgets that are related to modbus setup inside the layer of
+    //m_modbusSetupGroupBox (grouping by functionality)
+    m_modbusSetupGroupBoxLayout -> addWidget ( m_crioCapacitiesWidget     );
+    m_modbusSetupGroupBoxLayout -> addWidget ( m_exlogCompatibilityWidget );
+    m_modbusSetupGroupBoxLayout -> addWidget ( m_fileOperationWidget      );
+
+    m_finalLayout -> addWidget (simulateAcquisitionSwitch ,0,0,1,1);
+    m_finalLayout -> addWidget (startStopModbusSwitch     ,0,1,1,1);
+    m_finalLayout -> addWidget (m_modbusSetupGroupBox     ,1,0,1,1);
+    m_finalLayout -> addWidget (m_analogsViewer           ,1,1,1,1);
+    m_finalLayout -> addWidget (m_alarmWidget             ,1,2,2,1);
+    m_finalLayout -> addWidget (m_comControl              ,2,0,1,1);
+    m_finalLayout -> addWidget (m_debugOutput             ,2,1,1,1);
+
 }
+
+
 

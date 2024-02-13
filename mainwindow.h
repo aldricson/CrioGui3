@@ -26,6 +26,8 @@
 #include "./src/TabWidgets/QCrioViewWidget.h"
 #include "./src/TabWidgets/QMappingViewerWidget.h"
 
+#include "./src/BasicWidgets/QThermometer.h"
+
 class QProgressBar            ;
 class QMessageBox             ;
 class QPushButton             ;
@@ -111,7 +113,7 @@ private:
     void      downloadModulesDefinitions     (int index)   ;
     QString   retriveStringFromListViewIndex (int rowIndex);
 
-
+    QThermometer *test;
 private slots:
     //this slot is triggered when sshCommand fails
     void  onSSHError               (const QString &errorString , const QString &lastCommand);

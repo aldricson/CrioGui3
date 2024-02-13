@@ -1,5 +1,5 @@
 MainWindow {
-border: 1px solid #FEFBEA;
+    border: 1px solid #FEFBEA;
     border-radius: 6px;
     padding: 6px;
     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 0.025,
@@ -7,9 +7,12 @@ border: 1px solid #FEFBEA;
     color:#D3D3D3;
 }
 
-QLabel {
-	color:#D3D3D3;
+
+QLabel
+{
+    color:#D3D3D3;
 }
+
 
 QPushButton {
     border: 1px solid #449ef5;

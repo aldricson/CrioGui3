@@ -30,7 +30,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 namespace {
 struct qt_meta_stringdata_QModbusSetupViewer_t {
-    uint offsetsAndSizes[62];
+    uint offsetsAndSizes[64];
     char stringdata0[19];
     char stringdata1[16];
     char stringdata2[1];
@@ -44,24 +44,25 @@ struct qt_meta_stringdata_QModbusSetupViewer_t {
     char stringdata10[11];
     char stringdata11[15];
     char stringdata12[28];
-    char stringdata13[39];
-    char stringdata14[25];
-    char stringdata15[14];
-    char stringdata16[20];
-    char stringdata17[9];
-    char stringdata18[19];
-    char stringdata19[21];
-    char stringdata20[20];
-    char stringdata21[19];
-    char stringdata22[15];
-    char stringdata23[5];
-    char stringdata24[9];
-    char stringdata25[5];
+    char stringdata13[6];
+    char stringdata14[39];
+    char stringdata15[25];
+    char stringdata16[14];
+    char stringdata17[20];
+    char stringdata18[9];
+    char stringdata19[19];
+    char stringdata20[21];
+    char stringdata21[20];
+    char stringdata22[19];
+    char stringdata23[15];
+    char stringdata24[5];
+    char stringdata25[9];
     char stringdata26[5];
-    char stringdata27[12];
-    char stringdata28[26];
-    char stringdata29[14];
-    char stringdata30[21];
+    char stringdata27[5];
+    char stringdata28[12];
+    char stringdata29[26];
+    char stringdata30[14];
+    char stringdata31[21];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_QModbusSetupViewer_t::offsetsAndSizes) + ofs), len 
@@ -80,24 +81,25 @@ Q_CONSTINIT static const qt_meta_stringdata_QModbusSetupViewer_t qt_meta_stringd
         QT_MOC_LITERAL(146, 10),  // "saveToFile"
         QT_MOC_LITERAL(157, 14),  // "uploadToServer"
         QT_MOC_LITERAL(172, 27),  // "onExlogCompatibilityChanged"
-        QT_MOC_LITERAL(200, 38),  // "onModbusSimulationOrAcquisiti..."
-        QT_MOC_LITERAL(239, 24),  // "onStartStopModbusChanged"
-        QT_MOC_LITERAL(264, 13),  // "onModbusTimer"
-        QT_MOC_LITERAL(278, 19),  // "onSimulationStarted"
-        QT_MOC_LITERAL(298, 8),  // "response"
-        QT_MOC_LITERAL(307, 18),  // "onSimulationStoped"
-        QT_MOC_LITERAL(326, 20),  // "onAcquisitionStarted"
-        QT_MOC_LITERAL(347, 19),  // "onAcquisitionStoped"
-        QT_MOC_LITERAL(367, 18),  // "OnAnalogsDataReady"
-        QT_MOC_LITERAL(386, 14),  // "QList<quint16>"
-        QT_MOC_LITERAL(401, 4),  // "data"
-        QT_MOC_LITERAL(406, 8),  // "fileName"
-        QT_MOC_LITERAL(415, 4),  // "host"
-        QT_MOC_LITERAL(420, 4),  // "port"
-        QT_MOC_LITERAL(425, 11),  // "debugOutput"
-        QT_MOC_LITERAL(437, 25),  // "QMultiLineTextVisualizer*"
-        QT_MOC_LITERAL(463, 13),  // "analogsViewer"
-        QT_MOC_LITERAL(477, 20)   // "QModbusAnalogViewer*"
+        QT_MOC_LITERAL(200, 5),  // "state"
+        QT_MOC_LITERAL(206, 38),  // "onModbusSimulationOrAcquisiti..."
+        QT_MOC_LITERAL(245, 24),  // "onStartStopModbusChanged"
+        QT_MOC_LITERAL(270, 13),  // "onModbusTimer"
+        QT_MOC_LITERAL(284, 19),  // "onSimulationStarted"
+        QT_MOC_LITERAL(304, 8),  // "response"
+        QT_MOC_LITERAL(313, 18),  // "onSimulationStoped"
+        QT_MOC_LITERAL(332, 20),  // "onAcquisitionStarted"
+        QT_MOC_LITERAL(353, 19),  // "onAcquisitionStoped"
+        QT_MOC_LITERAL(373, 18),  // "OnAnalogsDataReady"
+        QT_MOC_LITERAL(392, 14),  // "QList<quint16>"
+        QT_MOC_LITERAL(407, 4),  // "data"
+        QT_MOC_LITERAL(412, 8),  // "fileName"
+        QT_MOC_LITERAL(421, 4),  // "host"
+        QT_MOC_LITERAL(426, 4),  // "port"
+        QT_MOC_LITERAL(431, 11),  // "debugOutput"
+        QT_MOC_LITERAL(443, 25),  // "QMultiLineTextVisualizer*"
+        QT_MOC_LITERAL(469, 13),  // "analogsViewer"
+        QT_MOC_LITERAL(483, 20)   // "QModbusAnalogViewer*"
     },
     "QModbusSetupViewer",
     "fileNameChanged",
@@ -112,6 +114,7 @@ Q_CONSTINIT static const qt_meta_stringdata_QModbusSetupViewer_t qt_meta_stringd
     "saveToFile",
     "uploadToServer",
     "onExlogCompatibilityChanged",
+    "state",
     "onModbusSimulationOrAcquisitionChanged",
     "onStartStopModbusChanged",
     "onModbusTimer",
@@ -141,7 +144,7 @@ Q_CONSTINIT static const uint qt_meta_data_QModbusSetupViewer[] = {
        0,       // classname
        0,    0, // classinfo
       18,   14, // methods
-       5,  152, // properties
+       5,  154, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
@@ -159,15 +162,15 @@ Q_CONSTINIT static const uint qt_meta_data_QModbusSetupViewer[] = {
        9,    0,  130,    2, 0x0a,   13 /* Public */,
       10,    0,  131,    2, 0x0a,   14 /* Public */,
       11,    0,  132,    2, 0x0a,   15 /* Public */,
-      12,    0,  133,    2, 0x08,   16 /* Private */,
-      13,    0,  134,    2, 0x08,   17 /* Private */,
-      14,    0,  135,    2, 0x08,   18 /* Private */,
-      15,    0,  136,    2, 0x08,   19 /* Private */,
-      16,    1,  137,    2, 0x08,   20 /* Private */,
-      18,    1,  140,    2, 0x08,   22 /* Private */,
-      19,    1,  143,    2, 0x08,   24 /* Private */,
-      20,    1,  146,    2, 0x08,   26 /* Private */,
-      21,    1,  149,    2, 0x08,   28 /* Private */,
+      12,    1,  133,    2, 0x08,   16 /* Private */,
+      14,    0,  136,    2, 0x08,   18 /* Private */,
+      15,    0,  137,    2, 0x08,   19 /* Private */,
+      16,    0,  138,    2, 0x08,   20 /* Private */,
+      17,    1,  139,    2, 0x08,   21 /* Private */,
+      19,    1,  142,    2, 0x08,   23 /* Private */,
+      20,    1,  145,    2, 0x08,   25 /* Private */,
+      21,    1,  148,    2, 0x08,   27 /* Private */,
+      22,    1,  151,    2, 0x08,   29 /* Private */,
 
  // signals: parameters
     QMetaType::Void,
@@ -181,22 +184,22 @@ Q_CONSTINIT static const uint qt_meta_data_QModbusSetupViewer[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void, QMetaType::Bool,   13,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void, QMetaType::QString,   17,
-    QMetaType::Void, QMetaType::QString,   17,
-    QMetaType::Void, QMetaType::QString,   17,
-    QMetaType::Void, QMetaType::QString,   17,
-    QMetaType::Void, 0x80000000 | 22,   23,
+    QMetaType::Void, QMetaType::QString,   18,
+    QMetaType::Void, QMetaType::QString,   18,
+    QMetaType::Void, QMetaType::QString,   18,
+    QMetaType::Void, QMetaType::QString,   18,
+    QMetaType::Void, 0x80000000 | 23,   24,
 
  // properties: name, type, flags
-      24, QMetaType::QString, 0x00015103, uint(0), 0,
-      25, QMetaType::QString, 0x00015103, uint(1), 0,
-      26, QMetaType::UShort, 0x00015103, uint(2), 0,
-      27, 0x80000000 | 28, 0x0001510b, uint(3), 0,
-      29, 0x80000000 | 30, 0x0001510b, uint(4), 0,
+      25, QMetaType::QString, 0x00015103, uint(0), 0,
+      26, QMetaType::QString, 0x00015103, uint(1), 0,
+      27, QMetaType::UShort, 0x00015103, uint(2), 0,
+      28, 0x80000000 | 29, 0x0001510b, uint(3), 0,
+      30, 0x80000000 | 31, 0x0001510b, uint(4), 0,
 
        0        // eod
 };
@@ -241,6 +244,7 @@ Q_CONSTINIT const QMetaObject QModbusSetupViewer::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'onExlogCompatibilityChanged'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<bool, std::false_type>,
         // method 'onModbusSimulationOrAcquisitionChanged'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'onStartStopModbusChanged'
@@ -281,7 +285,7 @@ void QModbusSetupViewer::qt_static_metacall(QObject *_o, QMetaObject::Call _c, i
         case 6: _t->loadFromFile(); break;
         case 7: _t->saveToFile(); break;
         case 8: _t->uploadToServer(); break;
-        case 9: _t->onExlogCompatibilityChanged(); break;
+        case 9: _t->onExlogCompatibilityChanged((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
         case 10: _t->onModbusSimulationOrAcquisitionChanged(); break;
         case 11: _t->onStartStopModbusChanged(); break;
         case 12: _t->onModbusTimer(); break;

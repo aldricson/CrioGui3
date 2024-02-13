@@ -10,6 +10,7 @@ C:/Users/aldri/Desktop/crio_gui/crio-gui3/build/crioGui3_autogen/RZKB3TJQWU/moc_
   C:/Qt/6.4.0/msvc2019_64/include/QtCore/QMetaType \
   C:/Qt/6.4.0/msvc2019_64/include/QtCore/QMutex \
   C:/Qt/6.4.0/msvc2019_64/include/QtCore/QObject \
+  C:/Qt/6.4.0/msvc2019_64/include/QtCore/QPropertyAnimation \
   C:/Qt/6.4.0/msvc2019_64/include/QtCore/QRect \
   C:/Qt/6.4.0/msvc2019_64/include/QtCore/QRegularExpression \
   C:/Qt/6.4.0/msvc2019_64/include/QtCore/QScopedPointer \
@@ -19,8 +20,10 @@ C:/Users/aldri/Desktop/crio_gui/crio-gui3/build/crioGui3_autogen/RZKB3TJQWU/moc_
   C:/Qt/6.4.0/msvc2019_64/include/QtCore/QSizeF \
   C:/Qt/6.4.0/msvc2019_64/include/QtCore/QString \
   C:/Qt/6.4.0/msvc2019_64/include/QtCore/QStringList \
+  C:/Qt/6.4.0/msvc2019_64/include/QtCore/QTimer \
   C:/Qt/6.4.0/msvc2019_64/include/QtCore/QUrl \
   C:/Qt/6.4.0/msvc2019_64/include/QtCore/QVariant \
+  C:/Qt/6.4.0/msvc2019_64/include/QtCore/QVector \
   C:/Qt/6.4.0/msvc2019_64/include/QtCore/QtCore \
   C:/Qt/6.4.0/msvc2019_64/include/QtCore/QtCoreDepends \
   C:/Qt/6.4.0/msvc2019_64/include/QtCore/q20algorithm.h \
@@ -246,6 +249,8 @@ C:/Users/aldri/Desktop/crio_gui/crio-gui3/build/crioGui3_autogen/RZKB3TJQWU/moc_
   C:/Qt/6.4.0/msvc2019_64/include/QtCore/qxpfunctional.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtGui/QIntValidator \
   C:/Qt/6.4.0/msvc2019_64/include/QtGui/QKeyEvent \
+  C:/Qt/6.4.0/msvc2019_64/include/QtGui/QMouseEvent \
+  C:/Qt/6.4.0/msvc2019_64/include/QtGui/QPainter \
   C:/Qt/6.4.0/msvc2019_64/include/QtGui/QRegularExpressionValidator \
   C:/Qt/6.4.0/msvc2019_64/include/QtGui/QTransform \
   C:/Qt/6.4.0/msvc2019_64/include/QtGui/qaction.h \
@@ -263,6 +268,7 @@ C:/Users/aldri/Desktop/crio_gui/crio-gui3/build/crioGui3_autogen/RZKB3TJQWU/moc_
   C:/Qt/6.4.0/msvc2019_64/include/QtGui/qinputdevice.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtGui/qkeysequence.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtGui/qpaintdevice.h \
+  C:/Qt/6.4.0/msvc2019_64/include/QtGui/qpainter.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtGui/qpalette.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtGui/qpen.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtGui/qpicture.h \
@@ -341,19 +347,20 @@ C:/Users/aldri/Desktop/crio_gui/crio-gui3/build/crioGui3_autogen/RZKB3TJQWU/moc_
   C:/Qt/6.4.0/msvc2019_64/include/QtNetwork/qtnetworkglobal.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtNetwork/qtnetworkversion.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtNetwork/qudpsocket.h \
-  C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/QFormLayout \
+  C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/QGridLayout \
   C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/QGroupBox \
   C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/QHBoxLayout \
   C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/QLabel \
-  C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/QLayout \
   C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/QLineEdit \
   C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/QMessageBox \
   C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/QPushButton \
+  C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/QScrollArea \
+  C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/QVBoxLayout \
   C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/QWidget \
   C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/qabstractbutton.h \
+  C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/qabstractscrollarea.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/qboxlayout.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/qdialog.h \
-  C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/qformlayout.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/qframe.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/qgridlayout.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/qgroupbox.h \
@@ -363,12 +370,17 @@ C:/Users/aldri/Desktop/crio_gui/crio-gui3/build/crioGui3_autogen/RZKB3TJQWU/moc_
   C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/qlineedit.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/qmessagebox.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/qpushbutton.h \
+  C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/qscrollarea.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/qsizepolicy.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/qtwidgets-config.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/qtwidgetsexports.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/qtwidgetsglobal.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/qwidget.h \
+  C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/BasicWidgets/QBetterSwitchButton.h \
   C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/BasicWidgets/QIpAddressEditor.h \
   C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/NetWorking/QSSLBaseClient.h \
   C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/NetWorking/QSSLCommandClient.h \
-  C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/stringUtils.h
+  C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/TabWidgetFundations/ModbusWidgets/QAlarmViewerWidget.h \
+  C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/TabWidgetFundations/ModbusWidgets/QExlogCompatibilityWidget.h \
+  C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/TabWidgetFundations/ModbusWidgets/QModbusCapacitiesWidget.h \
+  C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/TabWidgetFundations/ModbusWidgets/QModbusLoadSaveUploadWidget.h

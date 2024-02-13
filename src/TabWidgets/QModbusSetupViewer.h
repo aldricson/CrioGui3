@@ -6,7 +6,8 @@
 #include <QIntValidator>
 #include <QRegularExpressionValidator>
 #include <QRegularExpression>
-#include <QFormLayout>
+#include <QGridLayout>
+#include <QVBoxLayout>
 #include <QLabel>
 #include <QLineEdit>
 #include <QPushButton>
@@ -14,9 +15,10 @@
 #include <QMessageBox>
 #include "../NetWorking/QSSLCommandClient.h"
 #include "../BasicWidgets/QIpAddressEditor.h"
-#include "../stringUtils.h"
-
-
+#include "../TabWidgetFundations/ModbusWidgets/QAlarmViewerWidget.h"
+#include "../TabWidgetFundations/ModbusWidgets/QExlogCompatibilityWidget.h"
+#include "../TabWidgetFundations/ModbusWidgets/QModbusLoadSaveUploadWidget.h"
+#include "../TabWidgetFundations/ModbusWidgets/QModbusCapacitiesWidget.h"
 
 
 class QModbusAnalogViewer     ;
@@ -29,14 +31,14 @@ class QTimer                  ;
 class QModbusSetupViewer : public QWidget
 {
     Q_OBJECT
-    Q_PROPERTY(QString fileName READ fileName WRITE setFileName NOTIFY fileNameChanged)
-    Q_PROPERTY(QString host     READ host     WRITE setHost     NOTIFY hostChanged)
-    Q_PROPERTY(quint16 port     READ port     WRITE setPort     NOTIFY portChanged)
+    Q_PROPERTY(QString                  fileName       READ fileName      WRITE setFileName      NOTIFY fileNameChanged)
+    Q_PROPERTY(QString                  host           READ host          WRITE setHost          NOTIFY hostChanged)
+    Q_PROPERTY(quint16                  port           READ port          WRITE setPort          NOTIFY portChanged)
     Q_PROPERTY(QMultiLineTextVisualizer *debugOutput   READ debugOutput   WRITE setDebugOutput   NOTIFY debugOutputChanged)
     Q_PROPERTY(QModbusAnalogViewer      *analogsViewer READ analogsViewer WRITE setAnalogsViewer NOTIFY analogsViewerChanged)
 
 public:
-    explicit QModbusSetupViewer(QWidget *parent = nullptr);
+    explicit QModbusSetupViewer(const QString &settingFileName, QWidget *parent = nullptr);
 
     const QString &fileName() const;
     void setFileName(const QString &newFileName);
@@ -61,10 +63,10 @@ public slots:
     void uploadToServer();
 
 private slots:
-    void onExlogCompatibilityChanged              ()                                ;
+    void onExlogCompatibilityChanged              (bool state)                      ;
     void onModbusSimulationOrAcquisitionChanged   ()                                ;
     void onStartStopModbusChanged                 ()                                ;
-    void onModbusTimer                             ()                                ;
+    void onModbusTimer                            ()                                ;
     void onSimulationStarted                      (const QString          &response);
     void onSimulationStoped                       (const QString          &response);
     void onAcquisitionStarted                     (const QString          &response);
@@ -80,35 +82,34 @@ signals:
     void blockDirectReadingSignal (const bool &blocked);
 
 private:
-    QSettings *settings                    = nullptr;
+    QSettings   *m_settings     = nullptr;
+    QGridLayout *m_finalLayout  = nullptr;
 
-    QGroupBox                  *m_containerGroupBox          = nullptr; // GroupBox for Modbus Setup
-    QGroupBox                  *m_compatibilityLayerGroupBox = nullptr;
-    QGroupBox                  *m_modbusCapacitiesGroupBox   = nullptr;
-    QGroupBox                  *m_networkGroupBox            = nullptr;
-    QLineEdit                  *coilsLineEdit                = nullptr;
-    QLineEdit                  *discreteInputsLineEdit       = nullptr;
-    QLineEdit                  *holdingRegistersLineEdit     = nullptr;
-    QLineEdit                  *inputRegistersLineEdit       = nullptr;
+    QGroupBox                  *m_modbusSetupGroupBox         = nullptr; // GroupBox for Modbus Setup
+    QVBoxLayout                *m_modbusSetupGroupBoxLayout   = nullptr; // and it's layout
+
     QLineEdit                  *listeningPortLineEdit        = nullptr;
     QIpAddressEditor           *listeningInterfaceIpEdit     = nullptr;
-    QBetterSwitchButton        *compatibilityLayerSwitch     = nullptr;
+
     QBetterSwitchButton        *simulateAcquisitionSwitch    = nullptr;
     QBetterSwitchButton        *startStopModbusSwitch        = nullptr;
-    QLineEdit                  *nbAnalogsInLineEdit          = nullptr;
-    QLineEdit                  *nbAnalogsOutLineEdit         = nullptr;
-    QLineEdit                  *nbCountersLineEdit           = nullptr;
-    QPushButton                *reloadButton                 = nullptr;
-    QPushButton                *saveButton                   = nullptr;
-    QPushButton                *uploadButton                 = nullptr;
+
+    //this part of the refactoring replace all lineEdit and so on, it's integrated in a widget
+    QExlogCompatibilityWidget    *m_exlogCompatibilityWidget = nullptr;
+    QModbusLoadSaveUploadWidget  *m_fileOperationWidget      = nullptr;
+    QModbusCapacitiesWidget      *m_crioCapacitiesWidget     = nullptr;
+
+
     QModbusAnalogViewer        *m_analogsViewer              = nullptr;
     QModbusCrioClient          *m_modbusClient               = nullptr;
 
-    //QtTcpClient                *m_tcpClient                  = nullptr;
     QSSLCommandClient          *m_tcpClient                  = nullptr;
 
     QMultiLineTextVisualizer   *m_comControl                 = nullptr;
     QMultiLineTextVisualizer   *m_debugOutput                = nullptr;
+
+    QAlarmViewerWidget         *m_alarmWidget                = nullptr;
+
     QTimer                     *m_modbusTimer                = nullptr;
     QString                    m_host                                 ;
     quint16                    m_port                                 ;
@@ -121,8 +122,7 @@ private:
     void blockAllSignals            (const bool &blocked             );
     void setAllValidators           ()                                ;
     void createTCPClient            ()                                ;
-    void createSectionGroupBoxes    (QGroupBox *parentGroupBox)       ;
-    void createLoadSaveUploadButtons(QGroupBox *parentGroupBox )      ;
+    void connectLoadSaveUploadButtons ()                              ;
     void createSimulTimer           ()                                ;
     void setUpLayout                ()                                ;
     void processModbusReply         ()                                ;

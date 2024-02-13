@@ -362,12 +362,10 @@ C:/Users/aldri/Desktop/crio_gui/crio-gui3/build/crioGui3_autogen/EWIEGA46WW/moc_
   C:/Qt/6.4.0/msvc2019_64/include/QtNetwork/qtnetworkversion.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtNetwork/qudpsocket.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/QComboBox \
-  C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/QFormLayout \
   C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/QGridLayout \
   C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/QGroupBox \
   C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/QHBoxLayout \
   C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/QLabel \
-  C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/QLayout \
   C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/QLineEdit \
   C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/QListView \
   C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/QMainWindow \
@@ -389,7 +387,6 @@ C:/Users/aldri/Desktop/crio_gui/crio-gui3/build/crioGui3_autogen/EWIEGA46WW/moc_
   C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/qboxlayout.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/qcombobox.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/qdialog.h \
-  C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/qformlayout.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/qframe.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/qgridlayout.h \
   C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/qgroupbox.h \
@@ -425,6 +422,7 @@ C:/Users/aldri/Desktop/crio_gui/crio-gui3/build/crioGui3_autogen/EWIEGA46WW/moc_
   C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/BasicWidgets/QIpAddressEditor.h \
   C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/BasicWidgets/QMultiLineTextVisualizer.h \
   C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/BasicWidgets/QOScope.h \
+  C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/BasicWidgets/QThermometer.h \
   C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/Extractors/QCrioModulesDataExtractor.h \
   C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/Globals/globalEnumSpace.h \
   C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/Helpers/iniObject.h \
@@ -437,6 +435,10 @@ C:/Users/aldri/Desktop/crio_gui/crio-gui3/build/crioGui3_autogen/EWIEGA46WW/moc_
   C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/TabWidgetFundations/CrioDirectAccessTestWidgets/QBaseAnalogReaderTestWidget.h \
   C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/TabWidgetFundations/CrioDirectAccessTestWidgets/QReadCurrentTestWidget.h \
   C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/TabWidgetFundations/CrioDirectAccessTestWidgets/QReadVoltageTestWidget.h \
+  C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/TabWidgetFundations/ModbusWidgets/QAlarmViewerWidget.h \
+  C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/TabWidgetFundations/ModbusWidgets/QExlogCompatibilityWidget.h \
+  C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/TabWidgetFundations/ModbusWidgets/QModbusCapacitiesWidget.h \
+  C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/TabWidgetFundations/ModbusWidgets/QModbusLoadSaveUploadWidget.h \
   C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/TabWidgetFundations/Modules/QModulesIniListView.h \
   C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/TabWidgets/QCrioViewWidget.h \
   C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/TabWidgets/QMappingViewerWidget.h \

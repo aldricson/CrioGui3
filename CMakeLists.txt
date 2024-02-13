@@ -59,6 +59,7 @@ qt_add_executable(${THISPROJECT}
     ${PROJECT_HEADERS}
     ${PROJECT_SOURCES}
     ${PROJECT_RESOURCES}
+
 )
 
 set_target_properties(${THISPROJECT} PROPERTIES

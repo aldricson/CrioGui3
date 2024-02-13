@@ -27,7 +27,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 namespace {
 struct qt_meta_stringdata_QBetterSwitchButton_t {
-    uint offsetsAndSizes[44];
+    uint offsetsAndSizes[48];
     char stringdata0[20];
     char stringdata1[22];
     char stringdata2[1];
@@ -41,15 +41,17 @@ struct qt_meta_stringdata_QBetterSwitchButton_t {
     char stringdata10[18];
     char stringdata11[17];
     char stringdata12[19];
-    char stringdata13[15];
-    char stringdata14[11];
-    char stringdata15[10];
-    char stringdata16[24];
-    char stringdata17[9];
-    char stringdata18[10];
-    char stringdata19[11];
-    char stringdata20[10];
-    char stringdata21[12];
+    char stringdata13[13];
+    char stringdata14[15];
+    char stringdata15[11];
+    char stringdata16[10];
+    char stringdata17[24];
+    char stringdata18[9];
+    char stringdata19[10];
+    char stringdata20[11];
+    char stringdata21[10];
+    char stringdata22[12];
+    char stringdata23[6];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_QBetterSwitchButton_t::offsetsAndSizes) + ofs), len 
@@ -68,15 +70,17 @@ Q_CONSTINIT static const qt_meta_stringdata_QBetterSwitchButton_t qt_meta_string
         QT_MOC_LITERAL(163, 17),  // "falseColorChanged"
         QT_MOC_LITERAL(181, 16),  // "trueColorChanged"
         QT_MOC_LITERAL(198, 18),  // "cursorColorChanged"
-        QT_MOC_LITERAL(217, 14),  // "cursorPosition"
-        QT_MOC_LITERAL(232, 10),  // "cursorSize"
-        QT_MOC_LITERAL(243, 9),  // "qsizetype"
-        QT_MOC_LITERAL(253, 23),  // "posInBackGroundGradient"
-        QT_MOC_LITERAL(277, 8),  // "trueText"
-        QT_MOC_LITERAL(286, 9),  // "falseText"
-        QT_MOC_LITERAL(296, 10),  // "falseColor"
-        QT_MOC_LITERAL(307, 9),  // "trueColor"
-        QT_MOC_LITERAL(317, 11)   // "cursorColor"
+        QT_MOC_LITERAL(217, 12),  // "indexChanged"
+        QT_MOC_LITERAL(230, 14),  // "cursorPosition"
+        QT_MOC_LITERAL(245, 10),  // "cursorSize"
+        QT_MOC_LITERAL(256, 9),  // "qsizetype"
+        QT_MOC_LITERAL(266, 23),  // "posInBackGroundGradient"
+        QT_MOC_LITERAL(290, 8),  // "trueText"
+        QT_MOC_LITERAL(299, 9),  // "falseText"
+        QT_MOC_LITERAL(309, 10),  // "falseColor"
+        QT_MOC_LITERAL(320, 9),  // "trueColor"
+        QT_MOC_LITERAL(330, 11),  // "cursorColor"
+        QT_MOC_LITERAL(342, 5)   // "index"
     },
     "QBetterSwitchButton",
     "cursorPositionChanged",
@@ -91,6 +95,7 @@ Q_CONSTINIT static const qt_meta_stringdata_QBetterSwitchButton_t qt_meta_string
     "falseColorChanged",
     "trueColorChanged",
     "cursorColorChanged",
+    "indexChanged",
     "cursorPosition",
     "cursorSize",
     "qsizetype",
@@ -99,7 +104,8 @@ Q_CONSTINIT static const qt_meta_stringdata_QBetterSwitchButton_t qt_meta_string
     "falseText",
     "falseColor",
     "trueColor",
-    "cursorColor"
+    "cursorColor",
+    "index"
 };
 #undef QT_MOC_LITERAL
 } // unnamed namespace
@@ -110,24 +116,25 @@ Q_CONSTINIT static const uint qt_meta_data_QBetterSwitchButton[] = {
       10,       // revision
        0,       // classname
        0,    0, // classinfo
-      10,   14, // methods
-       9,   86, // properties
+      11,   14, // methods
+      10,   93, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-      10,       // signalCount
+      11,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   74,    2, 0x06,   10 /* Public */,
-       3,    1,   75,    2, 0x06,   11 /* Public */,
-       5,    0,   78,    2, 0x06,   13 /* Public */,
-       6,    0,   79,    2, 0x06,   14 /* Public */,
-       7,    0,   80,    2, 0x06,   15 /* Public */,
-       8,    0,   81,    2, 0x06,   16 /* Public */,
-       9,    0,   82,    2, 0x06,   17 /* Public */,
-      10,    0,   83,    2, 0x06,   18 /* Public */,
-      11,    0,   84,    2, 0x06,   19 /* Public */,
-      12,    0,   85,    2, 0x06,   20 /* Public */,
+       1,    0,   80,    2, 0x06,   11 /* Public */,
+       3,    1,   81,    2, 0x06,   12 /* Public */,
+       5,    0,   84,    2, 0x06,   14 /* Public */,
+       6,    0,   85,    2, 0x06,   15 /* Public */,
+       7,    0,   86,    2, 0x06,   16 /* Public */,
+       8,    0,   87,    2, 0x06,   17 /* Public */,
+       9,    0,   88,    2, 0x06,   18 /* Public */,
+      10,    0,   89,    2, 0x06,   19 /* Public */,
+      11,    0,   90,    2, 0x06,   20 /* Public */,
+      12,    0,   91,    2, 0x06,   21 /* Public */,
+      13,    0,   92,    2, 0x06,   22 /* Public */,
 
  // signals: parameters
     QMetaType::Void,
@@ -140,17 +147,19 @@ Q_CONSTINIT static const uint qt_meta_data_QBetterSwitchButton[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void,
 
  // properties: name, type, flags
-      13, QMetaType::QPoint, 0x00015103, uint(0), 0,
-      14, 0x80000000 | 15, 0x0001510b, uint(2), 0,
+      14, QMetaType::QPoint, 0x00015103, uint(0), 0,
+      15, 0x80000000 | 16, 0x0001510b, uint(2), 0,
        4, QMetaType::Bool, 0x00015103, uint(3), 0,
-      16, QMetaType::QReal, 0x00015103, uint(4), 0,
-      17, QMetaType::QString, 0x00015103, uint(5), 0,
-      18, QMetaType::QString, 0x00015103, uint(6), 0,
-      19, QMetaType::QColor, 0x00015103, uint(7), 0,
-      20, QMetaType::QColor, 0x00015103, uint(8), 0,
-      21, QMetaType::QColor, 0x00015103, uint(9), 0,
+      17, QMetaType::QReal, 0x00015103, uint(4), 0,
+      18, QMetaType::QString, 0x00015103, uint(5), 0,
+      19, QMetaType::QString, 0x00015103, uint(6), 0,
+      20, QMetaType::QColor, 0x00015103, uint(7), 0,
+      21, QMetaType::QColor, 0x00015103, uint(8), 0,
+      22, QMetaType::QColor, 0x00015103, uint(9), 0,
+      23, QMetaType::Int, 0x00015903, uint(10), 0,
 
        0        // eod
 };
@@ -180,6 +189,8 @@ Q_CONSTINIT const QMetaObject QBetterSwitchButton::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<QColor, std::true_type>,
         // property 'cursorColor'
         QtPrivate::TypeAndForceComplete<QColor, std::true_type>,
+        // property 'index'
+        QtPrivate::TypeAndForceComplete<int, std::true_type>,
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<QBetterSwitchButton, std::true_type>,
         // method 'cursorPositionChanged'
@@ -202,6 +213,8 @@ Q_CONSTINIT const QMetaObject QBetterSwitchButton::staticMetaObject = { {
         // method 'trueColorChanged'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'cursorColorChanged'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'indexChanged'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -223,6 +236,7 @@ void QBetterSwitchButton::qt_static_metacall(QObject *_o, QMetaObject::Call _c, 
         case 7: _t->falseColorChanged(); break;
         case 8: _t->trueColorChanged(); break;
         case 9: _t->cursorColorChanged(); break;
+        case 10: _t->indexChanged(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -297,6 +311,13 @@ void QBetterSwitchButton::qt_static_metacall(QObject *_o, QMetaObject::Call _c, 
                 return;
             }
         }
+        {
+            using _t = void (QBetterSwitchButton::*)();
+            if (_t _q_method = &QBetterSwitchButton::indexChanged; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+                *result = 10;
+                return;
+            }
+        }
     }else if (_c == QMetaObject::ReadProperty) {
         auto *_t = static_cast<QBetterSwitchButton *>(_o);
         (void)_t;
@@ -311,6 +332,7 @@ void QBetterSwitchButton::qt_static_metacall(QObject *_o, QMetaObject::Call _c, 
         case 6: *reinterpret_cast< QColor*>(_v) = _t->getFalseColor(); break;
         case 7: *reinterpret_cast< QColor*>(_v) = _t->getTrueColor(); break;
         case 8: *reinterpret_cast< QColor*>(_v) = _t->getCursorColor(); break;
+        case 9: *reinterpret_cast< int*>(_v) = _t->getIndex(); break;
         default: break;
         }
     } else if (_c == QMetaObject::WriteProperty) {
@@ -327,6 +349,7 @@ void QBetterSwitchButton::qt_static_metacall(QObject *_o, QMetaObject::Call _c, 
         case 6: _t->setFalseColor(*reinterpret_cast< QColor*>(_v)); break;
         case 7: _t->setTrueColor(*reinterpret_cast< QColor*>(_v)); break;
         case 8: _t->setCursorColor(*reinterpret_cast< QColor*>(_v)); break;
+        case 9: _t->setIndex(*reinterpret_cast< int*>(_v)); break;
         default: break;
         }
     } else if (_c == QMetaObject::ResetProperty) {
@@ -353,18 +376,18 @@ int QBetterSwitchButton::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 10)
+        if (_id < 11)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 10;
+        _id -= 11;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 10)
+        if (_id < 11)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 10;
+        _id -= 11;
     }else if (_c == QMetaObject::ReadProperty || _c == QMetaObject::WriteProperty
             || _c == QMetaObject::ResetProperty || _c == QMetaObject::BindableProperty
             || _c == QMetaObject::RegisterPropertyMetaType) {
         qt_static_metacall(this, _c, _id, _a);
-        _id -= 9;
+        _id -= 10;
     }
     return _id;
 }
@@ -428,6 +451,12 @@ void QBetterSwitchButton::trueColorChanged()
 void QBetterSwitchButton::cursorColorChanged()
 {
     QMetaObject::activate(this, &staticMetaObject, 9, nullptr);
+}
+
+// SIGNAL 10
+void QBetterSwitchButton::indexChanged()
+{
+    QMetaObject::activate(this, &staticMetaObject, 10, nullptr);
 }
 QT_WARNING_POP
 QT_END_MOC_NAMESPACE

@@ -21,6 +21,8 @@ class QBetterSwitchButton : public QWidget
     Q_PROPERTY(QColor falseColor READ getFalseColor WRITE setFalseColor NOTIFY falseColorChanged)
     Q_PROPERTY(QColor trueColor READ getTrueColor WRITE setTrueColor NOTIFY trueColorChanged)
     Q_PROPERTY(QColor cursorColor READ getCursorColor WRITE setCursorColor NOTIFY cursorColorChanged)
+    Q_PROPERTY(int index READ getIndex WRITE setIndex NOTIFY indexChanged FINAL)
+
 public:
     explicit QBetterSwitchButton(QString aFalseText   ,
                                  QString aTrueText    ,
@@ -58,6 +60,9 @@ public:
     const QColor &getCursorColor() const;
     void setCursorColor(const QColor &newCursorColor);
 
+    int getIndex() const;
+    void setIndex(int newIndex);
+
 private:
     QString     falseText              ;
     QString     trueText               ;
@@ -74,54 +79,57 @@ private:
     bool        state          = false ;
     int         falsePosX      = 0     ;
     int         truePosX       = 0     ;
+    int         index          = -1    ;
     qsizetype   labelFalseSize = 0     ;
     qsizetype   labelTrueSize  = 0     ;
     QString     trueQss        = ""    ;
     QString     falseQss       = ""    ;
 
-    QRadialGradient radialGradient;
-    QLinearGradient linearGradient;
-    QRadialGradient bgLinearGradient;
-    QLinearGradient cursorDisabledGradient;
-    QColor          falseContrastedColor;
-    QColor           trueContrastedColor;
+    QRadialGradient  radialGradient        ;
+    QLinearGradient  linearGradient        ;
+    QRadialGradient  bgLinearGradient      ;
+    QLinearGradient  cursorDisabledGradient;
+    QColor           falseContrastedColor  ;
+    QColor           trueContrastedColor   ;
 
     QColor getColorGradientAt(qreal key) const;
     QMap <qreal,QColor> falseTrueGradientMap;
-    qreal posInBackGroundGradient = 0.0;
+    qreal  posInBackGroundGradient = 0.0;
     QColor currentBackGroundColor;
 
     QPropertyAnimation switchMover          ;
     QPropertyAnimation BackGroundColorMover ;
-    QColor getContrastColor(QColor aColor);
+    QColor             getContrastColor(QColor aColor);
 
-    void    paintCursor();
-    void    paintBackground();
-    void    calculateGradients();
+    void    paintCursor               ();
+    void    paintBackground           ();
+    void    calculateGradients        ();
     void    calculateInitialSizeAndPos();
     void    moveSwitch(bool aState, bool fromMouse);
 
 
-
-
 protected:
-    void paintEvent(QPaintEvent* event);
-    void mousePressEvent(QMouseEvent *);
+
+    void paintEvent      (QPaintEvent * event);
+    void mousePressEvent (QMouseEvent *);
 
     QPoint getCursorPosition() const;
     void   setCursorPosition(QPoint newCursorPosition);
 signals:
 
     void cursorPositionChanged();
-    void enableStateChanged(bool state);
-    void cursorSizeChanged();
-    void stateChanged();
+    void enableStateChanged   (bool state);
+    void cursorSizeChanged    ();
+    void stateChanged         ();
+
+
     void posInBackGroundGradientChanged();
     void trueTextChanged();
     void falseTextChanged();
     void falseColorChanged();
     void trueColorChanged();
     void cursorColorChanged();
+    void indexChanged();
 };
 
 #endif // QBETTERSWITCHBUTTON_H

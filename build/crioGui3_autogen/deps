@@ -385,12 +385,10 @@ crioGui3_autogen/timestamp: \
 	C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/QColorDialog \
 	C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/QComboBox \
 	C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/QDialog \
-	C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/QFormLayout \
 	C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/QGridLayout \
 	C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/QGroupBox \
 	C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/QHBoxLayout \
 	C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/QLabel \
-	C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/QLayout \
 	C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/QLineEdit \
 	C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/QListView \
 	C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/QListWidgetItem \
@@ -415,7 +413,6 @@ crioGui3_autogen/timestamp: \
 	C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/qcolordialog.h \
 	C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/qcombobox.h \
 	C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/qdialog.h \
-	C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/qformlayout.h \
 	C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/qframe.h \
 	C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/qgridlayout.h \
 	C:/Qt/6.4.0/msvc2019_64/include/QtWidgets/qgroupbox.h \
@@ -746,97 +743,42 @@ crioGui3_autogen/timestamp: \
 	C:/Qt/6.4.0/msvc2019_64/lib/cmake/Qt6ZlibPrivate/Qt6ZlibPrivateConfigVersionImpl.cmake \
 	C:/Qt/6.4.0/msvc2019_64/lib/cmake/Qt6ZlibPrivate/Qt6ZlibPrivateTargets.cmake \
 	C:/Qt/6.4.0/msvc2019_64/lib/cmake/Qt6ZlibPrivate/Qt6ZlibPrivateVersionlessTargets.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeCXXCompiler.cmake.in \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeCXXCompilerABI.cpp \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeCXXInformation.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeCommonLanguageInclude.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeCompilerIdDetection.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeDetermineCXXCompiler.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeDetermineCompileFeatures.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeDetermineCompiler.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeDetermineCompilerABI.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeDetermineCompilerId.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeDetermineRCCompiler.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeDetermineSystem.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeFindBinUtils.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeFindDependencyMacro.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeGenericSystem.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeInitializeConfigs.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeLanguageInformation.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeNinjaFindMake.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeParseArguments.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeParseImplicitIncludeInfo.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeParseImplicitLinkInfo.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeParseLibraryArchitecture.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeRCCompiler.cmake.in \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeRCInformation.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeSystem.cmake.in \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeSystemSpecificInformation.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeSystemSpecificInitialize.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeTestCXXCompiler.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeTestCompilerCommon.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeTestRCCompiler.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CheckCXXCompilerFlag.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CheckCXXSourceCompiles.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CheckIncludeFile.cxx.in \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CheckIncludeFileCXX.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CheckLibraryExists.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/ADSP-DetermineCompiler.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/ARMCC-DetermineCompiler.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/ARMClang-DetermineCompiler.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/AppleClang-DetermineCompiler.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/Borland-DetermineCompiler.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/Clang-DetermineCompiler.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/Clang-DetermineCompilerInternal.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/Cray-DetermineCompiler.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/Embarcadero-DetermineCompiler.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/Fujitsu-DetermineCompiler.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/GHS-DetermineCompiler.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/HP-CXX-DetermineCompiler.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/IAR-DetermineCompiler.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/Intel-DetermineCompiler.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/MSVC-CXX.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/MSVC-DetermineCompiler.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/NVHPC-DetermineCompiler.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/NVIDIA-DetermineCompiler.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/PGI-DetermineCompiler.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/PathScale-DetermineCompiler.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/ROCMClang-DetermineCompiler.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/SCO-DetermineCompiler.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/TI-DetermineCompiler.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/Watcom-DetermineCompiler.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/XL-CXX-DetermineCompiler.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/FindPackageHandleStandardArgs.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/FindPackageMessage.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/FindThreads.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/FindVulkan.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/GNUInstallDirs.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Internal/CheckCompilerFlag.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Internal/CheckSourceCompiles.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Internal/FeatureTesting.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Platform/Windows-Determine-CXX.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Platform/Windows-MSVC-CXX.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Platform/Windows-MSVC.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Platform/Windows.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Platform/WindowsPaths.cmake \
+	C:/Qt/Tools/CMake_64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake \
+	C:/Qt/Tools/CMake_64/share/cmake-3.27/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake \
+	C:/Qt/Tools/CMake_64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake \
+	C:/Qt/Tools/CMake_64/share/cmake-3.27/Modules/CMakeFindDependencyMacro.cmake \
+	C:/Qt/Tools/CMake_64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake \
+	C:/Qt/Tools/CMake_64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake \
+	C:/Qt/Tools/CMake_64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake \
+	C:/Qt/Tools/CMake_64/share/cmake-3.27/Modules/CMakeParseArguments.cmake \
+	C:/Qt/Tools/CMake_64/share/cmake-3.27/Modules/CMakeRCInformation.cmake \
+	C:/Qt/Tools/CMake_64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake \
+	C:/Qt/Tools/CMake_64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake \
+	C:/Qt/Tools/CMake_64/share/cmake-3.27/Modules/CheckCXXCompilerFlag.cmake \
+	C:/Qt/Tools/CMake_64/share/cmake-3.27/Modules/CheckCXXSourceCompiles.cmake \
+	C:/Qt/Tools/CMake_64/share/cmake-3.27/Modules/CheckIncludeFileCXX.cmake \
+	C:/Qt/Tools/CMake_64/share/cmake-3.27/Modules/CheckLibraryExists.cmake \
+	C:/Qt/Tools/CMake_64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
+	C:/Qt/Tools/CMake_64/share/cmake-3.27/Modules/Compiler/MSVC-CXX.cmake \
+	C:/Qt/Tools/CMake_64/share/cmake-3.27/Modules/Compiler/MSVC.cmake \
+	C:/Qt/Tools/CMake_64/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake \
+	C:/Qt/Tools/CMake_64/share/cmake-3.27/Modules/FindPackageMessage.cmake \
+	C:/Qt/Tools/CMake_64/share/cmake-3.27/Modules/FindThreads.cmake \
+	C:/Qt/Tools/CMake_64/share/cmake-3.27/Modules/FindVulkan.cmake \
+	C:/Qt/Tools/CMake_64/share/cmake-3.27/Modules/GNUInstallDirs.cmake \
+	C:/Qt/Tools/CMake_64/share/cmake-3.27/Modules/Internal/CheckCompilerFlag.cmake \
+	C:/Qt/Tools/CMake_64/share/cmake-3.27/Modules/Internal/CheckFlagCommonConfig.cmake \
+	C:/Qt/Tools/CMake_64/share/cmake-3.27/Modules/Internal/CheckSourceCompiles.cmake \
+	C:/Qt/Tools/CMake_64/share/cmake-3.27/Modules/Platform/Windows-Initialize.cmake \
+	C:/Qt/Tools/CMake_64/share/cmake-3.27/Modules/Platform/Windows-MSVC-CXX.cmake \
+	C:/Qt/Tools/CMake_64/share/cmake-3.27/Modules/Platform/Windows-MSVC.cmake \
+	C:/Qt/Tools/CMake_64/share/cmake-3.27/Modules/Platform/Windows.cmake \
+	C:/Qt/Tools/CMake_64/share/cmake-3.27/Modules/Platform/WindowsPaths.cmake \
 	C:/Qt/Tools/QtCreator/share/qtcreator/package-manager/auto-setup.cmake \
 	C:/Users/aldri/Desktop/crio_gui/crio-gui3/CMakeLists.txt \
-	C:/Users/aldri/Desktop/crio_gui/crio-gui3/build/CMakeFiles/3.21.1/CMakeCXXCompiler.cmake \
-	C:/Users/aldri/Desktop/crio_gui/crio-gui3/build/CMakeFiles/3.21.1/CMakeRCCompiler.cmake \
-	C:/Users/aldri/Desktop/crio_gui/crio-gui3/build/CMakeFiles/3.21.1/CMakeSystem.cmake \
+	C:/Users/aldri/Desktop/crio_gui/crio-gui3/build/CMakeFiles/3.27.7/CMakeCXXCompiler.cmake \
+	C:/Users/aldri/Desktop/crio_gui/crio-gui3/build/CMakeFiles/3.27.7/CMakeRCCompiler.cmake \
+	C:/Users/aldri/Desktop/crio_gui/crio-gui3/build/CMakeFiles/3.27.7/CMakeSystem.cmake \
 	C:/Users/aldri/Desktop/crio_gui/crio-gui3/crio-gui2.qrc \
 	C:/Users/aldri/Desktop/crio_gui/crio-gui3/imdisk.qrc \
 	C:/Users/aldri/Desktop/crio_gui/crio-gui3/main.cpp \
@@ -873,6 +815,8 @@ crioGui3_autogen/timestamp: \
 	C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/BasicWidgets/QSizeFWidget.h \
 	C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/BasicWidgets/QSizeWidget.cpp \
 	C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/BasicWidgets/QSizeWidget.h \
+	C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/BasicWidgets/QThermometer.cpp \
+	C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/BasicWidgets/QThermometer.h \
 	C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/BasicWidgets/QUnitDispatcher.cpp \
 	C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/BasicWidgets/QUnitDispatcher.h \
 	C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/BasicWidgets/QValueSearchBox.cpp \
@@ -944,10 +888,18 @@ crioGui3_autogen/timestamp: \
 	C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/TabWidgetFundations/ModbusMaping/QBackUpWidget.h \
 	C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/TabWidgetFundations/ModbusMaping/QMappingRowWidget.cpp \
 	C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/TabWidgetFundations/ModbusMaping/QMappingRowWidget.h \
+	C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/TabWidgetFundations/ModbusWidgets/QAlarmViewerWidget.cpp \
+	C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/TabWidgetFundations/ModbusWidgets/QAlarmViewerWidget.h \
+	C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/TabWidgetFundations/ModbusWidgets/QExlogCompatibilityWidget.cpp \
+	C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/TabWidgetFundations/ModbusWidgets/QExlogCompatibilityWidget.h \
 	C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/TabWidgetFundations/ModbusWidgets/QModbusAnalogChannelViewer.cpp \
 	C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/TabWidgetFundations/ModbusWidgets/QModbusAnalogChannelViewer.h \
 	C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/TabWidgetFundations/ModbusWidgets/QModbusAnalogViewer.cpp \
 	C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/TabWidgetFundations/ModbusWidgets/QModbusAnalogViewer.h \
+	C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/TabWidgetFundations/ModbusWidgets/QModbusCapacitiesWidget.cpp \
+	C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/TabWidgetFundations/ModbusWidgets/QModbusCapacitiesWidget.h \
+	C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/TabWidgetFundations/ModbusWidgets/QModbusLoadSaveUploadWidget.cpp \
+	C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/TabWidgetFundations/ModbusWidgets/QModbusLoadSaveUploadWidget.h \
 	C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/TabWidgetFundations/Modules/QModulesIniListView.cpp \
 	C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/TabWidgetFundations/Modules/QModulesIniListView.h \
 	C:/Users/aldri/Desktop/crio_gui/crio-gui3/src/TabWidgets/QCrioViewWidget.cpp \
