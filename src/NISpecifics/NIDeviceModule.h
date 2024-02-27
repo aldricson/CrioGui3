@@ -112,11 +112,11 @@ private:
 
     bool loadChannels(std::string filename);
     bool loadCounters(std::string filename);
-    bool loadModules(std::string filename);
+    bool loadModules (std::string filename);
 
     void saveChannels(std::string filename);
     void saveCounters(std::string filename);
-    void saveModules(std::string filename);
+    void saveModules (std::string filename);
 
 
 protected:
